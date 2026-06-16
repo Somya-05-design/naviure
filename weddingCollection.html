@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Weddings | Naviure Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#514534",
+                    "on-secondary": "#27341d",
+                    "on-primary-fixed": "#111f12",
+                    "on-error": "#690005",
+                    "secondary": "#bcccab",
+                    "on-error-container": "#ffdad6",
+                    "on-background": "#dfe4db",
+                    "secondary-container": "#3f4d34",
+                    "inverse-surface": "#dfe4db",
+                    "inverse-on-surface": "#2d322c",
+                    "outline": "#8e928b",
+                    "on-secondary-fixed-variant": "#3d4b32",
+                    "surface-container-low": "#181d17",
+                    "secondary-fixed-dim": "#bcccab",
+                    "primary-fixed": "#d7e7d3",
+                    "tertiary-fixed": "#f2e0c9",
+                    "tertiary": "#d5c4ae",
+                    "primary": "#bbcbb8",
+                    "on-surface-variant": "#c4c8c0",
+                    "on-tertiary-fixed": "#231a0c",
+                    "surface-variant": "#313630",
+                    "surface-tint": "#bbcbb8",
+                    "background": "#101510",
+                    "primary-container": "#2d3b2d",
+                    "tertiary-fixed-dim": "#d5c4ae",
+                    "surface-container-high": "#262b26",
+                    "surface-container-highest": "#313630",
+                    "tertiary-container": "#413626",
+                    "on-secondary-container": "#aebe9d",
+                    "on-primary-container": "#95a593",
+                    "outline-variant": "#444842",
+                    "surface-bright": "#353b34",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#d7e8c6",
+                    "on-surface": "#dfe4db",
+                    "surface-dim": "#101510",
+                    "inverse-primary": "#536252",
+                    "surface-container-lowest": "#0a0f0a",
+                    "on-tertiary": "#392f1f",
+                    "surface": "#101510",
+                    "on-tertiary-container": "#af9f8a",
+                    "surface-container": "#1c211b",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#bbcbb8",
+                    "on-primary-fixed-variant": "#3c4a3c",
+                    "on-primary": "#263426",
+                    "on-secondary-fixed": "#131f09"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-padding": "120px",
+                    "unit": "8px",
+                    "container-max": "1440px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["EB Garamond"],
+                    "headline-md": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101510;
+            color: #dfe4db;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .parallax-bg {
+            transform: translateY(0);
+            transition: transform 0.1s ease-out;
+        }
+        .mist-layer {
+            background: linear-gradient(to bottom, transparent, rgba(16, 21, 16, 0.8), #101510);
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+                column-gap: 2rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+                column-gap: 3rem;
+            }
+        }
+        .image-reveal-hover:hover .image-content {
+            transform: scale(1.05);
+        }
+        .image-reveal-hover:hover .image-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md transition-all duration-500">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<a class="text-headline-md font-headline-md text-tertiary-fixed tracking-widest hover:text-primary transition-colors duration-300" href="naviurewebsite.html">
+                Naviure
+            </a>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">The Archive</a>
+<a class="text-label-caps font-label-caps text-primary border-b border-primary-fixed-dim pb-1" href="#">Inhabitants</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Expeditions</a>
+</div>
+<button class="px-6 py-2 border border-tertiary-fixed text-label-caps font-label-caps text-secondary hover:bg-surface-container-low/40 transition-all duration-500">
+                Inquire
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-gutter pt-32 pb-20 overflow-hidden">
+<!-- Background Texture / Ambient Layer -->
+<div class="absolute inset-0 z-0 opacity-20">
+
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-10"></div>
+<div class="relative z-20 max-w-3xl">
+<span class="text-label-caps font-label-caps text-primary tracking-[0.3em] block mb-6 animate-pulse">WEDDINGS</span>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-8">Wedding</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant italic leading-relaxed">
+                    Eternal vows whispered among ancient trees, captured through the lens of silence and light. We document the alchemy of two souls merging within the cathedral of the wild.
+                </p>
+</div>
+<!-- Root Decorative Divider -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg opacity-40">
+
+</div>
+</section>
+<!-- Gallery Grid -->
+<section class="px-gutter py-section-padding max-w-container-max mx-auto">
+<div class="masonry-grid">
+<!-- Main Featured Image -->
+<div class="masonry-item group relative overflow-hidden bg-surface-container-low transition-all duration-700">
+<div class="image-reveal-hover relative overflow-hidden aspect-[0.73]">
+<img alt="Cinematic moody wedding photography in a forest" class="image-content w-full h-full object-cover transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLtvkWf75I6Mv3-jqfyRA7ELHxV3_tJuB5lnqNeL1XTYBD7m4_w466Z2IyvTNQ9Ts4LG7XvLFXonRwX-nF7XwiE3EhrzclktR_BQ76Z-UT2JFRjdS-Es7TXvBpUYopiELWTZqqZLehR9JFG_ZdKFEAxDzFF3iRMnyhezCetaEy3OwiH8lUIhLheve2Z0bh6aAvlezhzX9dhfrPbfbQk5vZ0_JxQCkVhapkY_w1-if0OmmwN724H-hYlnj8k"/>
+<div class="image-overlay absolute inset-0 bg-background/40 opacity-0 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
+<div>
+<p class="text-label-caps font-label-caps text-primary mb-2">FEATURED STORY</p>
+<h3 class="text-headline-md font-headline-md text-on-surface">The Moss Cathedral</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Generated Image 1: High-Contrast Detail -->
+<div class="masonry-item group relative overflow-hidden bg-surface-container-low transition-all duration-700 md:mt-12">
+<div class="image-reveal-hover relative overflow-hidden aspect-square">
+<img class="image-content w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="A close-up photograph of a couple's hands gently intertwined, resting on a damp, moss-covered tree root. The lighting is low-key and atmospheric, with tiny water droplets shimmering on the green moss. The color palette is dominated by deep forest greens, earthy browns, and the soft, pale skin tones of the couple. The mood is intimate and serene, capturing a quiet moment of connection in a misty woodland setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_zjK8Mcb1rGb5jVV36ym4-Y_qd4ugtwX3W0HWNnHkFBAbv7Wwqm4jvlp82CNf6UsOeqaC5ztIDEGvZkpOkg9UxR8BET2wmtUDo33AgLFWT6KFwCalqhDhs9FOGYnYzenVKv6Lv3AHwCMKQpRFFAxc-PkI5ubqVj7VXpY38MLfuYFZ-n8fsTMFdpQGv4coI9SMYbP9Zg7FmNkxekVvvM4QyfdcfBjYv_3g-PQAXc32lbiRdKuCVjUqqEr6n7xbdjWY313zw_fUyh0"/>
+<div class="image-overlay absolute inset-0 bg-background/40 opacity-0 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
+<h3 class="text-headline-md font-headline-md text-on-surface">Anchored</h3>
+</div>
+</div>
+</div>
+<!-- Generated Image 2: Atmospheric Landscape -->
+<div class="masonry-item group relative overflow-hidden bg-surface-container-low transition-all duration-700">
+<div class="image-reveal-hover relative overflow-hidden aspect-[3/4]">
+<img class="image-content w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="A cinematic wide shot of a bride in a flowing, ethereal white gown standing alone in a clearing of a dense, dark pine forest. Thick morning mist swirls around her feet like low-lying clouds. The lighting is diffused and moody, with a cool, desaturated color palette of emerald greens and slate grays. The overall aesthetic is one of haunting beauty and quiet majesty, perfectly reflecting the Naviure fine-art photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8YrvX17AWMJzQaxuW7W_hF3pK6GxnI4dvHhA_MpFKJdkmHKBD2xfkA1pD5c3cDaMOl2ct3MqE_OfGRB36bU0mxDrdZCU73Q49Lg5si7OyV1KnnGEr65wcvubGgP_u1u-bc2VJA9bMHGXgPcJO1tlLPQh01N9EBnX97ygTj4Z16ER8bCBuUpXb-KG3muprfr-E2DcnzN-NzetmDIjiMMnvBX6IEqJe2_ESfMYOnVDESrAIN7tPTSZjhyrVIKFg4cPAot_7cQZltjU"/>
+<div class="image-overlay absolute inset-0 bg-background/40 opacity-0 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
+<h3 class="text-headline-md font-headline-md text-on-surface">Spirit of the Woods</h3>
+</div>
+</div>
+</div>
+<!-- Generated Image 3: Wide Cinematic -->
+<div class="masonry-item group relative overflow-hidden bg-surface-container-low transition-all duration-700 md:-mt-8">
+<div class="image-reveal-hover relative overflow-hidden aspect-video">
+<img class="image-content w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="A breathtaking wide-angle photograph of a wedding ceremony held under the canopy of massive, ancient oak trees draped in Spanish moss. The couple is a small but central focal point, surrounded by the overwhelming scale of nature. The lighting is dramatic, with golden beams of sun piercing through the dark foliage. The color grade is rich and earthy, utilizing Naviure's signature deep greens and warm highlights to create a sense of timeless awe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD60HCKV1VM94ciqJRYuJlE7fInZ89U3p0nIZGFoyTY2DPo8J-1ecNcAPIQ_DwqJr4Rar-5UEnD1-nU0nPjvFljwxZ8JaJE49iuY2rNoyDXUap9qIy3OsxHWR58l-mzs__kTM52sb4DUsnm5Zm_h1x5nYAqWIMNR8UMg5LcI8zxLtCZWY00F3ZEljOGw95FkyWOrqdSxqSRUd4fAb6JE8CpIlj4UTejBEVmaqVfhFfGiUVxQ_lEqHS4N_DAmzLPKjNOPFvw4efPyfw"/>
+<div class="image-overlay absolute inset-0 bg-background/40 opacity-0 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
+<h3 class="text-headline-md font-headline-md text-on-surface">The Ancient Canopy</h3>
+</div>
+</div>
+</div>
+<!-- Generated Image 4: Emotional Portrait -->
+<div class="masonry-item group relative overflow-hidden bg-surface-container-low transition-all duration-700">
+<div class="image-reveal-hover relative overflow-hidden aspect-[4/5]">
+<img class="image-content w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="An intimate fine-art portrait of a groom embracing the bride from behind in a dark, textured forest environment. Their eyes are closed, capturing a moment of profound peace and devotion. The lighting is highly directional, casting soft shadows and highlighting the intricate textures of their attire and the surrounding tree bark. The palette is muted and sophisticated, focusing on deep shadows and subtle olive-green midtones, evoking a sense of solemnity and love." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFUs3XyYBCGXYI10ve1UXFie7w21s6TZCoCtjeagZ_IqunxjpYXCZvFrV3CvLvd8WnUiUE_x6g3UR1aDscaPrQPXLgdU9xEHJIndHj6sj8l74m6Rllkj8c0wk3bx9tA6yuYFVyqm9fSh36j3GpQ5FIiLX89NMCiIsSg95tMOUuHA3mUPZ9AGmL9REO713gS4DT1N7eXPNXqKHMH1KpF7wZUCLZRP70FghUsydcJgW9GDyxucrO-sUGkwIg1XwOeKgZdCDeiIAjB4A"/>
+<div class="image-overlay absolute inset-0 bg-background/40 opacity-0 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
+<h3 class="text-headline-md font-headline-md text-on-surface">Silent Vows</h3>
+</div>
+</div>
+</div>
+<!-- Generated Image 5: Decorative Detail -->
+<div class="masonry-item group relative overflow-hidden bg-surface-container-low transition-all duration-700 md:mt-24">
+<div class="image-reveal-hover relative overflow-hidden aspect-square">
+<img class="image-content w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="A still-life photograph of a simple, elegant wedding bouquet made of dark ferns, white anemones, and wild forest flora, resting on a damp stone surface. Soft, atmospheric lighting highlights the delicate petals against the harsh, cold texture of the rock. The scene is saturated with deep greens and cool grays, maintaining the dark forest aesthetic. The mood is quiet and reflective, emphasizing the beauty of natural elements in a cinematic, fine-art composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3RWwWCdYMx8K6I_Ft9pS3GHMz_oqERbl5SQIEh5dOy8eOnmrqlt7Mt_ojcIsGHM714XH6r0OLIT0Pb35f-20apU_wsO5zo63pRatxHv8xmCJBDjxoc0x-FtFcfK83Et1Hpm9YZKwa3GtfZlHLiG3jNt478s623-TzLI6KaLtyBTp4lq-GOLgs9A6VUJ6lKSVbaGezonnKXUzrSY0zBN_9NA4DjnerhOESwXbaEpycOFLe4T8USY8HPCzrSzho7q1tjRty4J8A6ao"/>
+<div class="image-overlay absolute inset-0 bg-background/40 opacity-0 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
+<h3 class="text-headline-md font-headline-md text-on-surface">Flora &amp; Stone</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding bg-surface-container-lowest text-center relative overflow-hidden">
+<div class="max-w-2xl mx-auto px-gutter relative z-10">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-6">Begin Your Journey</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-10">
+                    We take a limited number of commissions each year to ensure every story is told with the depth it deserves.
+                </p>
+<a class="inline-block px-12 py-4 border border-primary text-label-caps font-label-caps text-on-surface hover:bg-primary-container transition-all duration-500 tracking-widest" href="#">
+                    REQUEST A CONSULTATION
+                </a>
+</div>
+<!-- Background element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 blur-[150px] rounded-full"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 py-section-padding relative">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-unit">
+<div class="flex flex-col gap-4">
+<div class="text-headline-lg font-headline-lg text-primary-fixed">Naviure</div>
+<p class="text-body-md font-body-md text-tertiary">© 2024 Naviure Photography. Deep in the Silent Forest.</p>
+</div>
+<div class="flex flex-wrap gap-8 items-center justify-center">
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Conservation Efforts</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Print Shop</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Privacy</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Licensing</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle scroll parallax for a more immersive feel
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.image-content');
+            
+            parallaxElements.forEach(el => {
+                const speed = 0.05;
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const yPos = (window.innerHeight - rect.top) * speed;
+                    el.style.transform = `translateY(${yPos - 20}px) scale(1.1)`;
+                }
+            });
+
+            // Navbar background transition
+            const nav = document.querySelector('nav');
+            if (scrolled > 100) {
+                nav.classList.add('py-2', 'bg-background/95');
+                nav.classList.remove('py-4', 'bg-background/80');
+            } else {
+                nav.classList.add('py-4', 'bg-background/80');
+                nav.classList.remove('py-2', 'bg-background/95');
+            }
+        });
+
+        // Initialize state
+        document.addEventListener('DOMContentLoaded', () => {
+            // Apply initial image scale for parallax effect
+            document.querySelectorAll('.image-content').forEach(img => {
+                img.style.transform = 'scale(1.1)';
+            });
+        });
+    </script>
+</body></html>

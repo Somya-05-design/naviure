@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Photoshoot Experience | Naviure Photography</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ffb4ab",
+                    "secondary-container": "#3f4d34",
+                    "on-primary-fixed-variant": "#3c4a3c",
+                    "surface-bright": "#353b34",
+                    "on-primary-container": "#95a593",
+                    "primary-container": "#2d3b2d",
+                    "primary": "#bbcbb8",
+                    "on-primary": "#263426",
+                    "secondary": "#bcccab",
+                    "on-tertiary-fixed-variant": "#514534",
+                    "error-container": "#93000a",
+                    "on-surface": "#dfe4db",
+                    "on-secondary": "#27341d",
+                    "surface-container-low": "#181d17",
+                    "surface": "#101510",
+                    "tertiary": "#d5c4ae",
+                    "secondary-fixed": "#d7e8c6",
+                    "inverse-on-surface": "#2d322c",
+                    "primary-fixed": "#d7e7d3",
+                    "surface-container-highest": "#313630",
+                    "surface-container-lowest": "#0a0f0a",
+                    "tertiary-fixed-dim": "#d5c4ae",
+                    "surface-tint": "#bbcbb8",
+                    "on-surface-variant": "#c4c8c0",
+                    "on-secondary-fixed-variant": "#3d4b32",
+                    "tertiary-fixed": "#f2e0c9",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#aebe9d",
+                    "on-tertiary": "#392f1f",
+                    "on-tertiary-fixed": "#231a0c",
+                    "surface-container-high": "#262b26",
+                    "on-primary-fixed": "#111f12",
+                    "surface-dim": "#101510",
+                    "outline": "#8e928b",
+                    "inverse-primary": "#536252",
+                    "background": "#101510",
+                    "on-background": "#dfe4db",
+                    "secondary-fixed-dim": "#bcccab",
+                    "tertiary-container": "#413626",
+                    "surface-container": "#1c211b",
+                    "on-tertiary-container": "#af9f8a",
+                    "on-secondary-fixed": "#131f09",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#bbcbb8",
+                    "surface-variant": "#313630",
+                    "outline-variant": "#444842",
+                    "inverse-surface": "#dfe4db"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-padding": "120px",
+                    "container-max": "1440px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["EB Garamond"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-lg": ["EB Garamond"],
+                    "headline-lg": ["EB Garamond"],
+                    "body-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101510;
+            color: #dfe4db;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mist-overlay {
+            background: linear-gradient(to bottom, transparent, rgba(16, 21, 16, 0.8), #101510);
+        }
+        .stagger-item:nth-child(even) {
+            transform: translateY(40px);
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            background-color: rgba(28, 33, 27, 0.4);
+        }
+        .parallax-bg {
+            transition: transform 0.1s ease-out;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0f0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d3b2d;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-gutter py-unit max-w-container-max mx-auto h-20">
+<a class="text-headline-md font-headline-md text-tertiary-fixed dark:text-tertiary-fixed tracking-widest hover:text-primary transition-colors duration-300" href="naviurewebsite.html">Naviure</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">The Archive</a>
+<a class="text-label-caps font-label-caps text-primary dark:text-primary border-b border-primary-fixed-dim pb-1" href="#">Expeditions</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Inhabitants</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+</div>
+<button class="px-6 py-2 border border-tertiary/30 text-secondary text-label-caps font-label-caps hover:bg-surface-container-low/40 transition-all duration-500 hover:backdrop-blur-xl">
+                Inquire
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<img class="w-full h-full object-cover scale-110 parallax-bg" id="hero-img" src="https://lh3.googleusercontent.com/aida/AP1WRLvC3IglY38m7qsAaLlKwkSK3hfqOn4C75-WXaOsl35QfPGieQ0oHNZohVSyMs5Hmydrn_nkRM4aY5-SAYsH_zi11mL7p1zToPVJMrtrnbtLAqzE_to6LNe1HxAa2IgjMXKZ5-TLmx-waTJrLD-L7yYpqP4w_iuoEXfeMEGkGul1GhPYW-Iphr0IcEgAIxWC7qph6WWLflwzwvf6mmdhjvqT4KZDfIUfy9zrLGS_8U98-2HJtuF0Uh-0520"/>
+<div class="absolute inset-0 mist-overlay z-20"></div>
+</div>
+<div class="relative z-30 text-center px-gutter">
+<h1 class="text-display-lg font-display-lg text-primary mb-4 opacity-0 transition-all duration-1000 translate-y-8" id="hero-title">Photoshoot</h1>
+<p class="text-body-lg font-body-lg text-tertiary max-w-xl mx-auto opacity-0 transition-all duration-1000 delay-300 translate-y-8" id="hero-subtext">Step into a world where reality fades into the mist.</p>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 opacity-60">
+<span class="text-label-caps font-label-caps text-on-surface-variant">Descend</span>
+<div class="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- Gallery Grid - Asymmetrical -->
+<section class="py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-gutter items-start">
+<!-- Left Column -->
+<div class="w-full md:w-5/12 flex flex-col gap-gutter">
+<div class="group relative overflow-hidden glass-card p-4 rounded-lg">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic portrait of a person draped in dark, iridescent velvet fabric, standing amidst tall, shadowy pine trees in a dense, fog-filled forest. The lighting is low-key, highlighting the texture of the mossy bark and the subtle sheen of the fabric. The overall mood is mysterious and ethereal, captured with a deep green and charcoal gray palette typical of high-fashion nature photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3hQTc4c5L0NB4-wj6gcVJCkTtPFW7v8tZLdF2HXT-npbmgoAabWqSOnqB60RrTgn81DtU4FfTcu5Z8hYmLvJN-PPB4E6yWEXh81Hf_kI3Nw8Co5VtfSFvsf7_Y4URlEKcojj5C0KoPEzanbICwe5pZ4p8X0ttrSzFDERDn_DK1WOTv7LhUqDDBsfCSRDY8b64wOj87XiVwYnsfIHIoTZiK7bnFtCqEF1wfXgz7Rz7rN3M8WK_YvAfFbr4Ysro4vpzdEnvXpzE9FI"/>
+<div class="mt-6">
+<span class="text-label-caps font-label-caps text-primary block mb-2">Phase I</span>
+<h3 class="text-headline-md font-headline-md text-on-surface">The Moss Veil</h3>
+</div>
+</div>
+<div class="group relative overflow-hidden glass-card p-4 rounded-lg md:mt-24">
+<img class="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An atmospheric shot of ancient tree roots twisting through damp, dark soil, partially covered by low-lying morning mist. A model's pale hand delicately touches the rough bark, creating a contrast between organic human forms and the rugged forest floor. The scene is illuminated by soft, diffused light filtering through a thick canopy, maintaining a somber, moody aesthetic with rich earthy tones and deep shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4C8eK41pwCDbErNEFAEAU4tgTEt-pSr2j3efrERNvmA1RwD6zP3EtD0Z2qkaiN24UqFr85gbfvLN9U_HVPsBpQGcb9SjYkvXRQqfKfHMUdc_rGp0ABz4-7D_lJE-r9EF9C_dyAFhymwG3oIT57spKLyR-ls5_noH_0sP3BndH8J3M-8GD_Xrobi0gPRwA45X9tpYiy9GfUu_pPDNd52nZ6Y9-k9dzBDE5kmsje70BOlrZVUOAaX6u3VroPRtMG9WMVwfKyAgwb6s"/>
+<div class="mt-6">
+<span class="text-label-caps font-label-caps text-primary block mb-2">Phase III</span>
+<h3 class="text-headline-md font-headline-md text-on-surface">Rooted Silence</h3>
+</div>
+</div>
+</div>
+<!-- Right Column -->
+<div class="w-full md:w-7/12 flex flex-col gap-gutter md:pt-48">
+<div class="group relative overflow-hidden glass-card p-4 rounded-lg">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<img class="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide-angle ethereal shot of a figure in a flowing, translucent white gown walking through a narrow clearing between massive, ancient sequoia trees. The forest floor is thick with ferns and damp stone, and the air is heavy with a blue-toned mist. The lighting is ethereal and directional, creating long shadows and a sense of vast, quiet solitude within the deep woods." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAikLW63EHqs5ZM3c_5UP8hfd5OqbB4sMlSPcGEyxI8YwAWapys15LvmEtr_NNvq5U-eJ9WLUiNYhaoN0IKUljR_3EV-iSf40FI7_sH34diP9T7k_D8aYp53ZhGj6t4UZVfpaJLEXub2-pCw8UM3Y2mWTD6IIV3zUhN_-6ARFrGaqqlnBig_G7yRMEsbpAjWR2W7MW5EMn9drwUQYiPk2NYgW_w00jRSWbEtN6YoUzi9JiucU4UmNUsGR-OSnCqa5MfJw__gQcbMss"/>
+<div class="mt-6">
+<span class="text-label-caps font-label-caps text-primary block mb-2">Phase II</span>
+<h3 class="text-headline-md font-headline-md text-on-surface">Canopy Echoes</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mt-12">
+<div class="glass-card p-6 flex flex-col justify-between border-l border-primary/20">
+<p class="text-body-md font-body-md text-on-surface-variant italic">
+                                "The forest does not reveal its secrets to the hurried. We wait for the light to bend through the damp boughs, capturing the fleeting moment when the human form becomes part of the ancient landscape."
+                            </p>
+<div class="mt-8">
+<span class="text-label-caps font-label-caps text-tertiary">Directives</span>
+<div class="w-8 h-px bg-tertiary mt-2"></div>
+</div>
+</div>
+<div class="relative group overflow-hidden glass-card p-4 rounded-lg">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Macro detail of dew drops resting on dark green moss and a weathered stone surface in a shadowy forest environment. The focus is sharp on the water droplets, reflecting the surrounding dark pine needles. The color palette is composed of deep emerald, forest green, and dark obsidian, creating a tactile and immersive feeling of a damp, ancient wilderness clearing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKmghv0lgUWf5GeiKs0WT8dDLhUiVJHgzGTJhk74wJYJKoel4FSAuNzCUqGTRFbSV1MX67jF17IaiHi7vUvVx5rYXOsdDulyiaAUw68PUkTlVaaVXlUL_DxYT_DkhMKSmSmEZuepcUN_vlepODNXCWNWvq6izSxrRO_u1cZtY8meRlDlzdeJs0W-B-XCvozjVtPufGYnOs54RSf6os3MkKUIzg7QB8fZu3FapIYoUPTh8w8tpE9iEXqmmH7QAtKbDv0e_bESSnYfw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Action Section -->
+<section class="py-section-padding bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto text-center px-gutter">
+<span class="text-label-caps font-label-caps text-secondary tracking-widest mb-6 block">Ready to enter the mist?</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-12">Limited Seasonal Expeditions Available</h2>
+<form class="space-y-8 text-left glass-card p-10 rounded-xl border border-outline-variant/10">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors peer placeholder-transparent" id="name" placeholder="Your Name" type="text"/>
+<label class="absolute left-0 -top-4 text-label-caps font-label-caps text-tertiary transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary" for="name">Name</label>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors peer placeholder-transparent" id="email" placeholder="Email Address" type="email"/>
+<label class="absolute left-0 -top-4 text-label-caps font-label-caps text-tertiary transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-body-md peer-focus:-top-4 peer-focus:text-label-caps peer-focus:text-primary" for="email">Email</label>
+</div>
+<div class="pt-8">
+<button class="w-full group py-5 border border-primary text-primary text-label-caps font-label-caps hover:bg-primary hover:text-on-primary transition-all duration-500 flex items-center justify-center gap-4">
+                            Submit Inquiry
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 py-section-padding relative">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-unit">
+<div class="flex flex-col gap-4">
+<span class="text-headline-lg font-headline-lg text-primary-fixed">Naviure</span>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-sm">© 2024 Naviure Photography. Deep in the Silent Forest.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Conservation Efforts</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Print Shop</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Privacy</a>
+<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Licensing</a>
+</div>
+</div>
+<div class="mt-16 text-center opacity-20 pointer-events-none select-none">
+<span class="text-[120px] font-headline-lg block leading-none">SILENT FOREST</span>
+</div>
+</footer>
+<script>
+        // Hero entry animation
+        window.addEventListener('load', () => {
+            document.getElementById('hero-title').classList.remove('opacity-0', 'translate-y-8');
+            document.getElementById('hero-subtext').classList.remove('opacity-0', 'translate-y-8');
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.getElementById('hero-img');
+            heroImg.style.transform = `scale(1.1) translateY(${scrolled * 0.3}px)`;
+        });
+
+        // Subtle form interactions
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.color = '#bbcbb8';
+            });
+            input.addEventListener('blur', () => {
+                if(!input.value) {
+                    input.parentElement.querySelector('label').style.color = '#d5c4ae';
+                }
+            });
+        });
+    </script>
+</body></html>
