@@ -1,284 +1,357 @@
-<!DOCTYPE html><html class="dark" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Nature Collection | Naviure Photography</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "error": "#ffb4ab",
-                "secondary-container": "#3f4d34",
-                "on-primary-fixed-variant": "#3c4a3c",
-                "surface-bright": "#353b34",
-                "on-primary-container": "#95a593",
-                "primary-container": "#2d3b2d",
-                "primary": "#bbcbb8",
-                "on-primary": "#263426",
-                "secondary": "#bcccab",
-                "on-tertiary-fixed-variant": "#514534",
-                "error-container": "#93000a",
-                "on-surface": "#dfe4db",
-                "on-secondary": "#27341d",
-                "surface-container-low": "#181d17",
-                "surface": "#101510",
-                "tertiary": "#d5c4ae",
-                "secondary-fixed": "#d7e8c6",
-                "inverse-on-surface": "#2d322c",
-                "primary-fixed": "#d7e7d3",
-                "surface-container-highest": "#313630",
-                "surface-container-lowest": "#0a0f0a",
-                "tertiary-fixed-dim": "#d5c4ae",
-                "surface-tint": "#bbcbb8",
-                "on-surface-variant": "#c4c8c0",
-                "on-secondary-fixed-variant": "#3d4b32",
-                "tertiary-fixed": "#f2e0c9",
-                "on-error-container": "#ffdad6",
-                "on-secondary-container": "#aebe9d",
-                "on-tertiary": "#392f1f",
-                "on-tertiary-fixed": "#231a0c",
-                "surface-container-high": "#262b26",
-                "on-primary-fixed": "#111f12",
-                "surface-dim": "#101510",
-                "outline": "#8e928b",
-                "inverse-primary": "#536252",
-                "background": "#101510",
-                "on-background": "#dfe4db",
-                "secondary-fixed-dim": "#bcccab",
-                "tertiary-container": "#413626",
-                "surface-container": "#1c211b",
-                "on-tertiary-container": "#af9f8a",
-                "on-secondary-fixed": "#131f09",
-                "on-error": "#690005",
-                "primary-fixed-dim": "#bbcbb8",
-                "surface-variant": "#313630",
-                "outline-variant": "#444842",
-                "inverse-surface": "#dfe4db"
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Nature Collection | Naviure Photography</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@200..800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#cfeac8",
+                        "surface": "#041704",
+                        "tertiary-fixed": "#e4e4cc",
+                        "inverse-primary": "#376934",
+                        "secondary": "#e9c349",
+                        "outline": "#8b9387",
+                        "surface-container": "#0f240f",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary-container": "#b0b19a",
+                        "surface-dim": "#041704",
+                        "surface-tint": "#9dd593",
+                        "primary-container": "#1b4d1b",
+                        "on-secondary-container": "#342800",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "surface-container-lowest": "#011202",
+                        "on-secondary": "#3c2f00",
+                        "primary-fixed": "#b8f1ad",
+                        "tertiary": "#c8c8b0",
+                        "tertiary-container": "#434432",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "surface-container-highest": "#243a22",
+                        "on-surface-variant": "#c1c9bb",
+                        "on-error": "#690005",
+                        "background": "#041704",
+                        "on-primary-fixed-variant": "#1f511e",
+                        "on-background": "#cfeac8",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#41493f",
+                        "inverse-on-surface": "#20351e",
+                        "on-primary-fixed": "#002203",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary-container": "#af8d11",
+                        "secondary-fixed": "#ffe088",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#243a22",
+                        "primary-fixed-dim": "#9dd593",
+                        "on-primary": "#033909",
+                        "primary": "#9dd593",
+                        "on-surface": "#cfeac8",
+                        "surface-bright": "#293e26",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-container": "#87be7f",
+                        "surface-container-low": "#0b200b",
+                        "surface-container-high": "#1a2f18",
+                        "on-tertiary": "#303221",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-sm": "16px",
+                        "stack-lg": "64px",
+                        "stack-md": "32px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "display-md": ["EB Garamond"],
+                        "body-lg": ["Manrope"],
+                        "label-lg": ["Manrope"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["EB Garamond"],
+                        "headline-lg-mobile": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-md": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display-lg": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "400" }]
+                    }
+                },
             },
-            "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-            },
-            "spacing": {
-                "unit": "8px",
-                "section-padding": "120px",
-                "container-max": "1440px",
-                "gutter": "32px"
-            },
-            "fontFamily": {
-                "headline-md": ["EB Garamond"],
-                "headline-lg-mobile": ["EB Garamond"],
-                "label-caps": ["Hanken Grotesk"],
-                "display-lg": ["EB Garamond"],
-                "headline-lg": ["EB Garamond"],
-                "body-md": ["Hanken Grotesk"],
-                "body-lg": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
-                "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-                "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}]
-            }
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .grainy-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+            opacity: 0.05;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         body {
-            background-color: #101510;
-            color: #dfe4db;
+            background-color: #041704;
+            color: #cfeac8;
             overflow-x: hidden;
         }
 
-        .moss-overlay {
-            background-image: radial-gradient(circle at 50% 50%, rgba(45, 59, 45, 0.15) 0%, transparent 80%);
-            pointer-events: none;
+        .nav-link-active {
+            color: #9dd593;
+            border-bottom: 1px solid #9dd593;
+            padding-bottom: 4px;
         }
 
-        .fog-blur {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-
-        .staggered-item:nth-child(even) {
-            transform: translateY(40px);
-        }
-
-        .root-line {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #8e928b, transparent);
-            width: 100%;
-            margin: 60px 0;
-            opacity: 0.3;
-        }
-
-        .image-card-hover:hover .image-overlay {
-            opacity: 1;
-        }
-
-        .parallax-bg {
-            transition: transform 0.1s ease-out;
+        .backdrop-blur-custom {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
     </style>
 </head>
-<body class="font-body-md">
-<!-- Top Navigation Bar -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md">
-<div class="flex justify-between items-center w-full px-gutter py-unit max-w-container-max mx-auto h-20">
-<a class="text-headline-md font-headline-md text-tertiary-fixed dark:text-tertiary-fixed tracking-widest hover:text-primary transition-colors duration-300" href="naviurewebsite.html">Naviure</a>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-label-caps font-label-caps text-primary dark:text-primary border-b border-primary-fixed-dim pb-1" href="#">The Archive</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Inhabitants</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Expeditions</a>
-</div>
-<button class="px-6 py-2 border border-tertiary text-secondary font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container/20 transition-all duration-300">
+
+<body class="font-body-md text-body-md selection:bg-secondary selection:text-surface">
+    <!-- Global Background with Blur -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+            style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLuXOdKBA_b14wWLm7ZpiLGDN_K-6vDBVRg0W7HxCxXsGdfj79-LRj6tcNFJOthtDvg8SOTkTWZRk3vq9rAaeM3RE_Xm8OMJ29U9kYkZ_fqxmRTXCbpJ9D4ClVyS3dpzn8wGjUI_bu2wYk1vINKE1e7qhNKzSletBD85AmLiQMBLn8h_0kfxBgskfUngQY2q8aFFXERS2MAHHvWQV3by-jOVvJHVbvfSBkBZSGqxLrQ7regRXS8K7nzCbw'); filter: brightness(0.4);">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-surface/20 via-surface/60 to-surface"></div>
+        <div class="absolute inset-0 grainy-overlay"></div>
+    </div>
+    <!-- TopNavBar -->
+    <header class="docked full-width top-0 z-50 fixed w-full bg-background/80 dark:bg-background/80 backdrop-blur-md">
+        <nav class="flex justify-between items-center w-full px-gutter py-unit max-w-container-max mx-auto h-20">
+            <a class="text-headline-md font-headline-md text-tertiary-fixed dark:text-tertiary-fixed tracking-widest uppercase"
+                href="#">
+                Naviure
+            </a>
+            <div class="hidden md:flex items-center space-x-stack-lg">
+                <a class="text-label-lg font-label-lg text-primary dark:text-primary border-b border-primary-fixed-dim pb-1"
+                    href="#">The Archive</a>
+                <a class="text-label-lg font-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Inhabitants</a>
+                <a class="text-label-lg font-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">About</a>
+                <a class="text-label-lg font-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Expeditions</a>
+            </div>
+            <button
+                class="px-6 py-2 border border-secondary text-secondary font-label-lg uppercase tracking-widest hover:bg-secondary hover:text-surface transition-all duration-500 rounded-lg">
                 Inquire
             </button>
-</div>
-</nav>
-<main>
-<!-- Hero Section -->
-<header class="relative min-h-screen flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background z-10"></div>
-<img alt="Ancient Forest" class="w-full h-full object-cover parallax-bg scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLt6Ql36j79771tgKDvS64qzJdVKVu5Rw9oLqcnwDZIaNORUl8PhzNvJ9iuuq0Gedc8SsOHBKhYT9SkIcMAC23HOTfUmLqSWPOuCmP73nmZI0-kBOT4Ed6qymVKvNLxMP1j56pgCDmUaiIebwkO2rZoFgDX1w7swzCBnLY4P7zO8m1dR7ordZygS7zfs67P41IMo7Z8tw2et9tljwQ62DtidRy5vdXsqiqR10c4E31pCazVdsm0uxcIoPzc" style="transform: translateY(196.148px) scale(1.1);">
-</div>
-<div class="relative z-20 text-center px-gutter">
-<span class="text-label-caps font-label-caps text-tertiary block mb-4 tracking-[0.4em] uppercase">Nature Collection</span>
-<h1 class="text-display-lg font-display-lg text-primary-fixed mb-6 md:text-[120px]">Nature</h1>
-<p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl mx-auto italic">
-                    The silent wisdom of the ancient wilderness.
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-[85vh] z-0 opacity-80">
+                <div class="w-full h-full bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvCeGfC9US-4Cy5uhvsm4FzOf_n3-uGBRxXCQ66JZvB0TIjOmpzt4EyGu8kAWM_CZM7sjiCisx1tDlhMAjqr2MXlcHnPGB-q2xxD0Se6JBw47PTzpDAbiPqN2B1EaPMfkY0_-o6XFn9Wkv089ts0DbIJsR436Blube1tSMJQfg0JA1bWbQZNsBNK7Vdgk22k3US4-R-eBz-iWETXCGefl7Y7n-0YO_IJHYh-DOTcnqo2qh0URzbNHli61c'); mask-image: linear-gradient(to bottom, black 70%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);">
+                </div>
+            </div>
+            <div
+                class="relative z-10 text-center px-gutter max-w-4xl mx-auto space-y-stack-sm reveal-on-scroll visible">
+                <span class="text-label-lg font-label-lg text-secondary tracking-[0.3em] uppercase block">Collection
+                    01</span>
+                <h1 class="text-display-lg font-display-lg text-on-surface leading-none md:text-display-lg">
+                    Nature
+                </h1>
+                <p
+                    class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mt-stack-md leading-relaxed">
+                    Witness the silent majesty of the pristine wilderness. A curated dialogue between light, shadow, and
+                    the ancient spirits of the deep forest.
                 </p>
-</div>
-<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-<span class="material-symbols-outlined text-primary text-4xl">expand_more</span>
-</div>
-</header>
-<!-- Gallery Section -->
-<section class="py-section-padding px-gutter max-w-container-max mx-auto relative">
-<!-- Decorative Background Element -->
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
-<div class="flex flex-col space-y-24">
-<!-- Layout row 1: Large landscape -->
-<div class="w-full group cursor-crosshair overflow-hidden rounded-lg">
-<div class="relative aspect-[16/7] overflow-hidden">
-<img alt="Forest Lake Dawn" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLubnGnJICJTy5vDJLIr1ilXhfK6eNjHh6ftBTxSaJzP_5mJrzh1fLzj19zmEOFkNusXCih6iakUSp4l-PZX8ak5ULuMiM_JjWF4rbkpERr7ZGAJN-Rs8PRLnllNYPi3Sh3EuOlu34NFsOUcyuljg6ITXcbMNwgmOf1nlZoA3J1QgejDJnLjFGZ9VaA9IB58cR0Ci6jBPHO9M1pvXU4f8EWdhj106jTBadvmWxzEsNPLPSSe6GFwgiFMeg">
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-12 flex flex-col justify-end">
-<span class="text-label-caps font-label-caps text-tertiary mb-2">01. Dawn</span>
-<h3 class="text-headline-lg font-headline-lg text-white">Silent Lake Mirror</h3>
-</div>
-</div>
-</div>
-<div class="root-line"></div>
-<!-- Layout row 2: Asymmetrical Dual columns -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-<div class="md:col-span-5 md:mt-24">
-<div class="relative group rounded-lg overflow-hidden border border-outline-variant/10">
-<img alt="Owl Macro" class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvmweidhJjTiVLZX22_HTMPpX_3VQhTfK58OAu7AaioLG22GDe6SdWW_ED1JDI2ABk4dRocS5JCyK69NctARy1kklW6_i_psGq1UnOWtyGy7A_3l98E5u_G8HxBzS3IA3y2qkQ1g_d5J-ys7fUByw5cb4nQOE5M5vwiAMUuovJG9uTSlXeEq3jOw3dw35AxHchr7KmbQgNc7daxJMyk0p7mG4j3rDmNaC_sQpqYe0YSMgJ3yjXV4qhWaw">
-<div class="absolute inset-0 bg-background/40 fog-blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-8">
-<h4 class="text-headline-md font-headline-md text-primary-fixed mb-4">The Observer</h4>
-<p class="text-body-md font-body-md text-on-surface italic">Night watches through eyes of liquid gold.</p>
-<button class="mt-8 text-label-caps font-label-caps border-b border-primary text-primary pb-1">View Details</button>
-</div>
-</div>
-<div class="mt-8">
-<span class="text-label-caps font-label-caps text-tertiary">02. Wildlife</span>
+                <div class="pt-stack-md flex justify-center gap-stack-md">
+                    <span class="material-symbols-outlined text-secondary text-4xl animate-bounce"
+                        style="font-variation-settings: 'wght' 200;">keyboard_double_arrow_down</span>
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section -->
+        <section class="py-section-gap px-gutter max-w-container-max mx-auto relative z-10">
 
-</div>
-</div>
-<div class="md:col-span-7 flex flex-col space-y-12">
-<div class="relative group rounded-lg overflow-hidden shadow-2xl">
-<img alt="Ancient Trees" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLt6Ql36j79771tgKDvS64qzJdVKVu5Rw9oLqcnwDZIaNORUl8PhzNvJ9iuuq0Gedc8SsOHBKhYT9SkIcMAC23HOTfUmLqSWPOuCmP73nmZI0-kBOT4Ed6qymVKvNLxMP1j56pgCDmUaiIebwkO2rZoFgDX1w7swzCBnLY4P7zO8m1dR7ordZygS7zfs67P41IMo7Z8tw2et9tljwQ62DtidRy5vdXsqiqR10c4E31pCazVdsm0uxcIoPzc">
-<div class="absolute bottom-0 left-0 p-12 bg-gradient-to-tr from-background to-transparent w-full">
-<h3 class="text-headline-lg font-headline-lg text-primary-fixed mb-2">Veil of Moss</h3>
-<p class="text-body-md font-body-md text-on-surface-variant">Deep Forest, 2024</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Quote Section -->
-<section class="py-section-padding bg-surface-container-lowest relative overflow-hidden">
-<div class="moss-overlay absolute inset-0"></div>
-<div class="max-w-4xl mx-auto px-gutter text-center relative z-10">
-<span class="material-symbols-outlined text-primary text-6xl mb-8 opacity-40">park</span>
-<blockquote class="text-headline-lg font-headline-lg text-on-surface italic leading-snug">
+        </section>
+        <!-- Quote/Mood Section -->
+        <section class="py-section-gap relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none opacity-20">
+                <div class="w-full h-full bg-cover bg-fixed bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLt6Ql36j79771tgKDvS64qzJdVKVu5Rw9oLqcnwDZIaNORUl8PhzNvJ9iuuq0Gedc8SsOHBKhYT9SkIcMAC23HOTfUmLqSWPOuCmP73nmZI0-kBOT4Ed6qymVKvNLxMP1j56pgCDmUaiIebwkO2rZoFgDX1w7swzCBnLY4P7zO8m1dR7ordZygS7zfs67P41IMo7Z8tw2et9tljwQ62DtidRy5vdXsqiqR10c4E31pCazVdsm0uxcIoPzc'); filter: grayscale(100%) blur(10px);">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-3xl mx-auto text-center px-gutter reveal-on-scroll visible">
+                <span class="material-symbols-outlined text-secondary mb-stack-md text-4xl"
+                    style="font-variation-settings: 'FILL' 1;">format_quote</span>
+                <blockquote class="text-display-md font-display-md text-tertiary-fixed italic leading-tight">
                     "In every walk with nature one receives far more than he seeks."
                 </blockquote>
-<cite class="block mt-8 text-label-caps font-label-caps text-tertiary-fixed tracking-[0.3em]">— JOHN MUIR</cite>
-</div>
-</section>
-<!-- Contact/Inquiry CTA -->
-<section class="py-section-padding px-gutter max-w-container-max mx-auto">
-<div class="border border-outline-variant/20 p-12 md:p-24 flex flex-col items-center text-center rounded-lg relative group">
-<div class="absolute inset-0 bg-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-<h2 class="text-headline-lg font-headline-lg text-primary-fixed mb-8 relative z-10">Acquire a Piece of the Wild</h2>
-<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mb-12 relative z-10">
-                    Limited edition fine-art prints are available for all captures in the 'Nature' collection. Each piece is printed on museum-grade cotton rag.
-                </p>
-<div class="flex flex-col md:flex-row gap-6 relative z-10">
-<button class="px-12 py-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110 transition-all">Download Catalog</button>
-<button class="px-12 py-4 border border-tertiary text-secondary font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-container transition-all">Custom Commission</button>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
-<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-unit py-section-padding">
-<div class="flex flex-col gap-4 items-center md:items-start">
-<span class="text-headline-lg font-headline-lg text-primary-fixed">Naviure</span>
-<p class="text-body-md font-body-md text-on-surface-variant max-w-xs text-center md:text-left italic">
-                    © 2024 Naviure Photography. Deep in the Silent Forest.
-                </p>
-</div>
-<div class="flex flex-wrap justify-center gap-8 md:gap-12 mt-8 md:mt-0">
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Conservation Efforts</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Print Shop</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Privacy</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300" href="#">Licensing</a>
-</div>
-</div>
-</footer>
-<script>
-        // Atmospheric Parallax Effect
+                <cite
+                    class="block mt-stack-md text-label-lg font-label-lg text-outline uppercase tracking-[0.4em] not-italic">—
+                    John Muir</cite>
+            </div>
+        </section>
+        <!-- Prints Section (Glassmorphism) -->
+        <section
+            class="py-section-gap px-gutter bg-surface-container-lowest/50 backdrop-blur-md border-y border-outline-variant/10">
+            <div class="max-w-container-max mx-auto">
+                <div
+                    class="flex flex-col md:flex-row items-end justify-between mb-stack-lg gap-stack-md reveal-on-scroll visible">
+                    <div class="max-w-xl">
+                        <h2 class="text-headline-lg font-headline-lg text-on-surface">Limited Edition Prints</h2>
+                        <p class="text-body-md font-body-md text-on-surface-variant mt-2">Each piece is museum-quality,
+                            printed on archival fine-art paper with hand-signed certification of authenticity.</p>
+                    </div>
+                    <button
+                        class="px-8 py-3 bg-primary-container text-on-primary-container font-label-lg uppercase tracking-widest hover:brightness-125 transition-all rounded-lg flex items-center gap-2">
+                        View Shop <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+                    <div class="reveal-on-scroll visible" style="transition-delay: 100ms;">
+                        <div
+                            class="aspect-[4/5] bg-surface-container-high p-8 flex items-center justify-center shadow-2xl relative group">
+                            <div class="w-full h-full border-[12px] border-white shadow-inner overflow-hidden relative">
+                                <img alt=""
+                                    class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                                    src="https://lh3.googleusercontent.com/aida/AP1WRLsbO5dob7S_r1bm7KhJtDA1rv2zHLc4mJl_RJhXCo_VDdHVNiGEny-A-looFmCUUnds-AMFXeYuQK_02qlm-xvSzoHxPMa9SXIJkExqh_n6Jx9N2S1yK7s0xvLkYhlEW7UlfB7A-Fr2-jPVrH73_Som_J016m1EPaX7xxFEmJF7K9U5n72k8q16Shfj8vnCr0Abub3DgAFZ_Msx2njg9J_jUf_G89Fkru_elFqjrJruHHB2H6vHFL9dJg8">
+                            </div>
+                            <div
+                                class="absolute -bottom-4 right-4 bg-secondary text-surface px-4 py-2 font-label-lg text-xs uppercase tracking-widest shadow-lg">
+                                New Arrival</div>
+                        </div>
+                        <div class="mt-stack-md text-center">
+                            <p class="text-label-lg font-label-lg text-on-surface uppercase">Nocturnal Silence</p>
+                            <p class="text-label-sm font-label-sm text-outline mt-1">Starting from $240</p>
+                        </div>
+                    </div>
+                    <div class="reveal-on-scroll visible" style="transition-delay: 200ms;">
+                        <div
+                            class="aspect-[4/5] bg-surface-container-high p-8 flex items-center justify-center shadow-2xl relative group">
+                            <div class="w-full h-full border-[12px] border-white shadow-inner overflow-hidden relative">
+                                <img alt=""
+                                    class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                                    src="https://lh3.googleusercontent.com/aida/AP1WRLt6Ql36j79771tgKDvS64qzJdVKVu5Rw9oLqcnwDZIaNORUl8PhzNvJ9iuuq0Gedc8SsOHBKhYT9SkIcMAC23HOTfUmLqSWPOuCmP73nmZI0-kBOT4Ed6qymVKvNLxMP1j56pgCDmUaiIebwkO2rZoFgDX1w7swzCBnLY4P7zO8m1dR7ordZygS7zfs67P41IMo7Z8tw2et9tljwQ62DtidRy5vdXsqiqR10c4E31pCazVdsm0uxcIoPzc">
+                            </div>
+                        </div>
+                        <div class="mt-stack-md text-center">
+                            <p class="text-label-lg font-label-lg text-on-surface uppercase">The Ancient Guard</p>
+                            <p class="text-label-sm font-label-sm text-outline mt-1">Starting from $310</p>
+                        </div>
+                    </div>
+                    <div class="reveal-on-scroll visible" style="transition-delay: 300ms;">
+                        <div
+                            class="aspect-[4/5] bg-surface-container-high p-8 flex items-center justify-center shadow-2xl relative group">
+                            <div class="w-full h-full border-[12px] border-white shadow-inner overflow-hidden relative">
+                                <img alt=""
+                                    class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                                    src="https://lh3.googleusercontent.com/aida/AP1WRLvCeGfC9US-4Cy5uhvsm4FzOf_n3-uGBRxXCQ66JZvB0TIjOmpzt4EyGu8kAWM_CZM7sjiCisx1tDlhMAjqr2MXlcHnPGB-q2xxD0Se6JBw47PTzpDAbiPqN2B1EaPMfkY0_-o6XFn9Wkv089ts0DbIJsR436Blube1tSMJQfg0JA1bWbQZNsBNK7Vdgk22k3US4-R-eBz-iWETXCGefl7Y7n-0YO_IJHYh-DOTcnqo2qh0URzbNHli61c">
+                            </div>
+                            <div
+                                class="absolute -bottom-4 right-4 bg-tertiary-fixed text-surface px-4 py-2 font-label-lg text-xs uppercase tracking-widest shadow-lg">
+                                Collector's Pick</div>
+                        </div>
+                        <div class="mt-stack-md text-center">
+                            <p class="text-label-lg font-label-lg text-on-surface uppercase">Dawn at Lake Solitude</p>
+                            <p class="text-label-sm font-label-sm text-outline mt-1">Starting from $280</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="full-width relative py-section-padding bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-unit py-stack-lg">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <h2 class="text-headline-lg font-headline-lg text-primary-fixed uppercase tracking-widest">Naviure</h2>
+                <p class="text-body-md font-body-md text-tertiary max-w-xs text-center md:text-left">Capturing the soul
+                    of the silent forest with royal precision and botanical reverence.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-stack-md">
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300 uppercase tracking-widest"
+                    href="#">Conservation Efforts</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300 uppercase tracking-widest"
+                    href="#">Print Shop</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300 uppercase tracking-widest"
+                    href="#">Privacy</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors duration-300 uppercase tracking-widest"
+                    href="#">Licensing</a>
+            </div>
+        </div>
+        <div class="border-t border-outline-variant/10 mt-stack-md pt-8 pb-12 text-center">
+            <p class="text-body-md font-body-md text-outline">© 2024 Naviure Photography. Deep in the Silent Forest.</p>
+        </div>
+    </footer>
+    <script>
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Subtle Parallax on scroll
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const parallaxItems = document.querySelectorAll('.parallax-bg');
-            
-            parallaxItems.forEach(item => {
-                const speed = 0.4;
-                item.style.transform = `translateY(${scrolled * speed}px) scale(1.1)`;
-            });
-
-            // Reveal navbar on scroll logic could go here if needed
-        });
-
-        // Subtle drift interaction
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 10;
-            const y = (e.clientY / window.innerHeight - 0.5) * 10;
-            
-            // Apply slight tilt to specific cards
-            const interactiveElements = document.querySelectorAll('.image-card-hover');
-            interactiveElements.forEach(el => {
-                el.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
-            });
+            const heroImage = document.querySelector('.absolute.top-0.left-0.w-full.h-\\[85vh\\] .bg-cover');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
         });
     </script>
 
 
-</body></html>
+</body>
+
+</html>

@@ -1,70 +1,64 @@
-<!DOCTYPE html><html class="dark" lang="en" style=""><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Naviure Photography | Silent Forest</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Naviure Photography | Silent Forest</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "on-primary-fixed-variant": "#3c4a3c",
-                        "tertiary-fixed": "#f2e0c9",
-                        "on-tertiary-fixed": "#231a0c",
-                        "surface-container-highest": "#313630",
-                        "on-secondary-container": "#aebe9d",
-                        "primary-fixed-dim": "#bbcbb8",
-                        "on-tertiary": "#392f1f",
-                        "tertiary-fixed-dim": "#d5c4ae",
-                        "inverse-on-surface": "#2d322c",
-                        "surface-tint": "#bbcbb8",
-                        "secondary-fixed": "#d7e8c6",
-                        "on-surface-variant": "#c4c8c0",
-                        "primary-container": "#2d3b2d",
-                        "on-secondary-fixed": "#131f09",
-                        "on-primary-fixed": "#111f12",
-                        "outline": "#8e928b",
-                        "surface-variant": "#313630",
-                        "background": "#101510",
-                        "on-error-container": "#ffdad6",
-                        "on-tertiary-container": "#af9f8a",
-                        "primary-fixed": "#d7e7d3",
-                        "tertiary": "#d5c4ae",
-                        "surface-container-low": "#181d17",
-                        "inverse-surface": "#dfe4db",
-                        "on-primary-container": "#95a593",
-                        "surface-bright": "#353b34",
-                        "on-secondary-fixed-variant": "#3d4b32",
-                        "outline-variant": "#444842",
-                        "error-container": "#93000a",
+                        "primary": "#d9c58d",
+                        "on-primary": "#392e00",
+                        "primary-container": "#524419",
+                        "on-primary-container": "#f7e1a7",
+                        "secondary": "#cfc8b0",
+                        "on-secondary": "#353121",
+                        "secondary-container": "#4c4736",
+                        "on-secondary-container": "#ebe4cb",
+                        "tertiary": "#abcfb2",
+                        "on-tertiary": "#173722",
+                        "tertiary-container": "#2f4e37",
+                        "on-tertiary-container": "#c7ebcd",
                         "error": "#ffb4ab",
-                        "surface-dim": "#101510",
-                        "on-background": "#dfe4db",
-                        "surface": "#101510",
-                        "on-secondary": "#27341d",
-                        "on-surface": "#dfe4db",
-                        "on-tertiary-fixed-variant": "#514534",
-                        "secondary": "#bcccab",
-                        "on-primary": "#263426",
-                        "surface-container-lowest": "#0a0f0a",
-                        "surface-container-high": "#262b26",
-                        "secondary-container": "#3f4d34",
-                        "inverse-primary": "#536252",
-                        "tertiary-container": "#413626",
-                        "secondary-fixed-dim": "#bcccab",
-                        "primary": "#bbcbb8",
-                        "surface-container": "#1c211b",
-                        "on-error": "#690005"
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "background": "#041704",
+                        "on-background": "#e1e4d9",
+                        "surface": "#041704",
+                        "on-surface": "#e1e4d9",
+                        "surface-variant": "#414940",
+                        "on-surface-variant": "#c1c9be",
+                        "outline": "#8b9389",
+                        "outline-variant": "#414940",
+                        "inverse-surface": "#e1e4d9",
+                        "inverse-on-surface": "#2d322c",
+                        "inverse-primary": "#6c5d2f",
+                        "surface-dim": "#041704",
+                        "surface-bright": "#293e26",
+                        "surface-container-lowest": "#011202",
+                        "surface-container-low": "#0b200b",
+                        "surface-container": "#112411",
+                        "surface-container-high": "#1a2f1a",
+                        "surface-container-highest": "#243a24",
+                        "surface-tint": "#d9c58d"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
                     },
                     "spacing": {
                         "container-max": "1440px",
@@ -73,36 +67,37 @@
                         "section-padding": "120px"
                     },
                     "fontFamily": {
-                        "headline-lg-mobile": ["EB Garamond"],
-                        "display-lg": ["EB Garamond"],
-                        "body-lg": ["Hanken Grotesk"],
-                        "label-caps": ["Hanken Grotesk"],
-                        "headline-md": ["EB Garamond"],
-                        "body-md": ["Hanken Grotesk"],
-                        "headline-lg": ["EB Garamond"]
+                        "headline-lg-mobile": ["EB Garamond", "serif"],
+                        "display-lg": ["EB Garamond", "serif"],
+                        "body-lg": ["Hanken Grotesk", "sans-serif"],
+                        "label-caps": ["Hanken Grotesk", "sans-serif"],
+                        "headline-md": ["EB Garamond", "serif"],
+                        "body-md": ["Hanken Grotesk", "sans-serif"],
+                        "headline-lg": ["EB Garamond", "serif"]
                     },
                     "fontSize": {
-                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}],
-                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
-                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}]
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }]
                     }
                 },
             },
         }
     </script>
-<style>
+    <style>
         body {
-            background-color: #101510;
-            color: #dfe4db;
+            background-color: #041704;
+            color: #e1e4d9;
             overflow-x: hidden;
+            font-family: 'Hanken Grotesk', sans-serif;
         }
 
         .moss-texture {
-            background-image: radial-gradient(circle at 2px 2px, rgba(45, 59, 45, 0.15) 1px, transparent 0);
+            background-image: radial-gradient(circle at 2px 2px, rgba(41, 62, 38, 0.15) 1px, transparent 0);
             background-size: 24px 24px;
         }
 
@@ -110,13 +105,9 @@
             transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
         }
 
-        .staggered-item:nth-child(even) {
-            transform: translateY(40px);
-        }
-
         .glass-panel {
             backdrop-filter: blur(12px);
-            background: rgba(16, 21, 16, 0.6);
+            background: rgba(1, 18, 2, 0.7);
         }
 
         .root-divider {
@@ -125,249 +116,369 @@
             transform: translateX(-50%);
             z-index: 10;
             pointer-events: none;
-            opacity: 0.4;
+            opacity: 0.3;
         }
 
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #0a0f0a;
+            background: #011202;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #2d3b2d;
+            background: #243a24;
             border-radius: 10px;
+        }
+
+        .royal-gradient {
+            background: linear-gradient(180deg, rgba(4, 23, 4, 0.4) 0%, transparent 50%, rgba(4, 23, 4, 1) 100%);
         }
     </style>
 </head>
+
 <body class="font-body-md text-on-background selection:bg-primary-container selection:text-primary">
-<!-- Top Navigation Bar -->
-<header class="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 bg-background/80 backdrop-blur-md">
-<div class="flex justify-between items-center w-full px-gutter py-unit max-w-container-max mx-auto h-20">
-<div class="flex items-center gap-4">
-<span class="text-headline-md font-headline-md text-tertiary-fixed tracking-widest">NAVIURE</span>
-</div>
-<nav class="hidden md:flex gap-gutter items-center">
-<a class="text-label-caps font-label-caps text-primary border-b border-primary-fixed-dim pb-1 transition-all duration-300" href="#">Intro</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Collections</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Services</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact<br></a>
-</nav>
-<button class="px-6 py-2 border border-outline-variant/30 text-label-caps font-label-caps text-secondary hover:bg-primary-container/20 transition-all duration-500 rounded-full">
-                Inquire
+    <!-- Top Navigation Bar -->
+    <header
+        class="fixed top-0 left-0 right-0 z-[100] transition-all duration-500 bg-background/90 backdrop-blur-md border-b border-outline-variant/10">
+        <div class="flex justify-between items-center w-full px-gutter py-unit max-w-container-max mx-auto h-20">
+            <div class="flex items-center gap-4">
+
+            </div>
+            <nav class="hidden md:flex gap-gutter items-center">
+                <a class="text-label-caps font-label-caps text-primary border-b border-primary pb-1 transition-all duration-300"
+                    href="#">Intro</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#collections">Collections</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Services</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#">Contact</a>
+            </nav>
+            <button
+                class="px-8 py-2.5 border border-primary/40 text-label-caps font-label-caps text-primary hover:bg-primary/10 transition-all duration-500 rounded-lg">
+                INQUIRE
             </button>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="relative h-screen w-full flex items-center justify-center overflow-hidden animate-[fadeInUp_1.2s_ease-out_forwards]" style="opacity: 1;">
-
-<div class="absolute inset-0 z-0">
-<img alt="Hero Image" class="w-full h-full object-cover grayscale-[30%] contrast-[1.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvsdzkzS2FhQ69MUQXRRNc2hc5iPVNZG_6IkN7XNy_5tDK8X8UipqU7A3Lfi7vrQKSHKi7KQfJ8emVbJXe1rstM0EFg3dY1CofFoyXqdmOAHFlnFo7Qdk22mekon7Ys7pJOpBaazc4IIc6ViaJpC8Q9JKfVl9KrHrRgtAuXuAiY82z_mOz9SzCWU4TDdDpMHvYlGb5DcBlQV5q7tSGQQbvoMqaPg6KAhbq8e7mZpx7OkFlsR-vAG8n8lOr1Bc2LWLBMzIJOlozXug">
-<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background"></div>
-</div>
-<div class="relative z-10 text-center max-w-4xl px-gutter"><div class="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-    <span class="text-[18vw] font-display-lg text-primary/10 tracking-[0.2em] uppercase leading-none blur-[1px] animate-[fadeIn_2s_ease-out_forwards]">
-        NAVIURE
-    </span>
-</div>
-<span class="text-label-caps font-label-caps text-primary tracking-[0.4em] mb-8 block opacity-0 animate-[fadeIn_1.5s_ease-out_forwards]">FINE ART PHOTOGRAPHY</span>
-
-
-</div>
-
-</section>
-<!-- Mood Board Section -->
-<section class="relative bg-background py-section-padding overflow-hidden animate-[fadeInUp_1.2s_ease-out_forwards]" style="opacity: 1;"><div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAujlYMGkcV85YxeimHZLAuyCCC6wEqOKCHsj8yDeKA4H0EEkm1hnByhtMRfwFAnUNAkSyxVF6z__JHLvXEpzdMltiIYnmUzRM0trKINYNjt1QFmO_gwOPEH-gxcXYVaRKn34DvZw820eg07q5hD5jaczOW_xfBTqc5ZJEyNeE4Paya5w6eUKaVJGP45mPESSdRKUJ258qRp7k2iKasSrL158b58_Z0IYGn2HB9FYK2Zs5qyaFvOfI8CCFbSRN17B0SNAqua1UOoG4" alt="" class="w-full h-full object-cover opacity-15 grayscale-[20%] contrast-[1.1]">
-    <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-60"></div>
-</div>
-<div class="root-divider -top-20">
-<svg fill="none" height="200" viewBox="0 0 400 200" width="400" xmlns="http://www.w3.org/2000/svg">
-<path d="M200 0C200 40 180 60 150 80C120 100 100 140 100 200" stroke="#3c4a3c" stroke-dasharray="8 8" stroke-width="2"></path>
-<path d="M200 0C200 30 220 50 250 70C280 90 300 130 300 200" stroke="#3c4a3c" stroke-dasharray="10 5" stroke-width="1.5"></path>
-<path d="M200 0C190 20 170 30 160 50" stroke="#3c4a3c" stroke-width="1"></path>
-</svg>
-</div>
-<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-5 mb-16 md:mb-0">
-<h2 class="text-headline-lg font-headline-lg text-tertiary-fixed mb-8 leading-tight">
-                    Hey There I'm<br><span class="italic">Naveen</span></h2>
-<div class="space-y-6 text-body-md font-body-md text-on-surface-variant/80">
-<p class="">I am Naviure , Passionate photographer dedicated to capturing real moments with creativity and emotion . I specialize in portraits, events, lifestyle, and creative photography, focusing on natural expressions, meaningful details, and timeless visuals. My goal is to turn everyday moments into lasting memories through a unique perspective, careful composition, and storytelling in every frame. Whether it’s a personal shoot, special event, or creative project, I aim to create photographs that feel authentic, memorable, and full of life.</p>
-
-</div>
-</div>
-<div class="md:col-span-7 grid grid-cols-2 gap-4 relative">
-<div class="space-y-4 translate-y-12">
-<div class="aspect-[4/5] overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
-<img class="w-full h-full object-cover" data-alt="A detailed close-up of vibrant green moss covering a damp, gnarled tree root in a dark forest setting. The lighting is moody and soft, emphasizing the textures of the forest floor. Deep greens and earthy browns dominate the palette, creating an immersive, organic feel consistent with a fine-art photography aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk94yb40x9727rL2Qd9r1pSvYa1Sv9Pc4EuS_1bL-YHR65bMWJM-0Hw4x-lLfcy9sm0JL-mWrxgKsmqIoPB4nm4VMSL8UXPOLqGSMCwlM8SyhWKagTkE0mTUYymTZRJEZh6LeAE73C2AwM_PMIe4mhj6W3fmZkRIjIkhtrKN7yBMIh1RlDymbEEX4UiQBUccwDEFD0VaVU-Bnylv0EovgTmgP_ujnAZIVT2ffFzHcXtQOp5VSLkpgnIvEhid-zlYG17HLsxtMvHmY">
-</div>
-<div class="aspect-square overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
-<img class="w-full h-full object-cover" data-alt="An ethereal view of tall pine trees disappearing into a thick morning fog. The color palette is monochromatic with shades of deep forest green and misty whites. The atmosphere is quiet and mysterious, capturing the essence of a silent wilderness at dawn in high-fidelity professional landscape style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_KyFFWCXoNw0aSPv7Pb0Tfv_IHUEnTdRQaL2H8X_Rhdi5NnLbk1_KJFe8w9akZzMCxjWGBwelK5H5YHhAlztYy15C28eKKd8xIAgmI0hJHZLOEq316KWrEbp4hTTCJosmJSjylkCTENRefagIuys6O5dBYGU0KxZqA8Mxb5xAVdarokIe3sm9WhQxMOgX5Q3SQvc-zXulIdvT4MpRsWDeiAAViXGQD2l0nuaHRjSAnElnmBc8R9_nfTLwunYFb-6QAeJkfxgfQ7E">
-</div>
-</div>
-<div class="space-y-4">
-<div class="aspect-square overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
-<img class="w-full h-full object-cover" data-alt="Sunlight filtering through a dense canopy of ancient trees, creating dramatic light rays against a dark, shadowy forest background. The scene is rich with texture, from the rough bark of the trees to the ferns on the ground. A moody, high-contrast palette of gold and dark green highlights the natural beauty and solitude of the woods." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsM4UqChDgrZjBVifosddbCSYEc-_DThCnW0MhIv13oPATn5KRwUf606-czv0tm2QgPfj6lYbZHamL4SKVJ17B8O3n9tEWzCuSXvXW42AIf7Ptoo2llYVnQhONokLA8BQ2nYTWufksRgMsKUcBWhtxpmdwha7W3tP1VzUGnX4J61Q1JfiyLXuYzN3J6Hx_ZYGMnmUS6xRLHzdvyV8SWds_Pkr9EuT4w24qYcvZgoMHvZ5k6F3-aOkTH8UulCDyVb0ySY7UOc5X3sA">
-</div>
-<div class="aspect-[3/4] overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
-<img class="w-full h-full object-cover" data-alt="A macro shot of a single red mushroom with white spots standing on a bed of dark, decaying autumn leaves and moist soil. The background is a soft, out-of-focus dark forest, creating a dreamlike and intimate portrait of nature. The lighting is low and focused, emphasizing the mushroom's organic form and deep colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAUa-i09wsfGi88wQjePIe7vb3sLEEXsFCQ3O-tEKwX7L7XAyeF6ta45q7H9d11GnjDU0lE-5dqhCh7tKKTBpRPfg9TIQkAf0k09ZW7GCOyNQhAKHZJXgPQwMhVJHmJpaSKBAcBE4iYQK2UsZzYL0UQ-PaqRKzZUUW64Jrcs7rMrca-9qf3riooWamb610vYaFIQNKDONCzYGCNeFQBJgwHgqWs6GOCmypZ_XszYXlr-pc8buvwGDxf2bZAoHcrywOnE7g948bJyo">
-</div>
-</div>
-</div>
-</div>
-</section>
-
-</div>
-</section>
-
-
-<!-- Collections Section -->
-<section class="bg-surface-container-low py-section-padding relative animate-[fadeInUp_1.2s_ease-out_forwards]" style="opacity: 1;">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="mb-16">
-<h2 class="text-headline-lg font-headline-lg text-on-surface">Collections</h2>
-<div class="w-16 h-[1px] bg-primary mt-4 opacity-40"></div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Wedding Card -->
-<a href="weddingCollection.html" class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer block">
-<img alt="Wedding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB7XlcNT7_s_BtoUg8lqMs4mySDUzjTPDJAUXLMO_AKquGjSm5xiPUBElKizu7enaHo6eO2Gs7rUM49L3Fwj2cJ4XgnGj-QvxAfzaBtIJ9yQFqNwe9GISWRfQPXo5lzOfbcIyTYpnPZAW3plBST9GPwSuXutsn6qoX6ityK9VDEE9rvRLSPZKE5GrDjwWFuB0xRXAx67oozNHLXf0479vEcYGmhQBm23m-lEgpZlPFCmMVrKj0j9Dcj28EHnG0Cv2eUQtxQJq-9qE">
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent group-hover:from-background/90 transition-all duration-500"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<h3 class="text-headline-md font-headline-md text-on-surface transition-transform duration-500 group-hover:scale-110">Wedding</h3>
-</div>
-</a>
-<!-- Pre-Wedding Card -->
-<a href="preweddingCollection.html" class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer block">
-<img alt="Pre-Wedding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-io3Ez3qvV-GcgThSoyIMZ0zIX7LnKYgW8sSlHwoNqM2SAW8pqtnD0hyZpHPeStEldr_qxiVlTX8xNucttQnTLW0vcP06Q4LZ__S1rJHod89uyZrxSCJmybb54m6Zr-8oNCnpW_AwnyvB_JR_-6OyG3nEl3t1tUiY3XwUS-0CZl9xhj9bEURrOpa3F2Z9VwU-9c4QKqY6OqFiSgqTk4__VgvxpxXy1KV6SNCvfoXzy-cWGcARjxmWkLnu8X6_572qrDiZlqJId-Y">
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent group-hover:from-background/90 transition-all duration-500"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<h3 class="text-headline-md font-headline-md text-on-surface transition-transform duration-500 group-hover:scale-110">Pre-Wedding</h3>
-</div>
-</a>
-<!-- Nature Card -->
-<a href="natureCollection.html" class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer block">
-<img alt="Nature" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgxn3ehsMrjHAMz5F6o9bCXuHmmzf6lif1thMgyRGAyn1jZXMmlbh8CSd7xWwdQoi1dvzuCq6Am2tjBvYH0-bmmTdiUrEVpwhmzLpCHbiNCYQ7UJYrIJNDqeNgDcf8_fE4fE4MYILWTdq4Pj_XyfYIMD0uhcX7LqsuGpxaCJHF8BsLwz7OxU05IgjtI45X11bKyG1jiSDPDw5hJ9zC1-FgCdWPU86ftWvOiPiYFtGnZGv11UxW1LiDloQv8fBhpIfRFC3JoUwx_Es">
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent group-hover:from-background/90 transition-all duration-500"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<h3 class="text-headline-md font-headline-md text-on-surface transition-transform duration-500 group-hover:scale-110">Nature</h3>
-</div>
-</a>
-<!-- Party Card -->
-<a href="partyCollection.html" class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer block">
-<img alt="Party" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA048PqAyOBsszjmAtp9bMo8U0IBq6V1pg8yJm_CHns-EumARUknFLdVzBAqhXMW-ANd3kGdU0etmt4lY1lCupb84BrX50enZqx1mfE0zuk8Oz8qaFPETSe_mbZQXbkYmTEMqzwxI7QQClxvSuBacauUbss8ddlHzqdvtMDSYgJSu8w4MqmGHftz3VQKL8KXzAGdhGfFlNej6iIuLvCCpZkSa-3GpIhZBR4zPHB9JG7Fo2YYQKDhuqTnix6WcDNoCMIlVrNS0EeZYI">
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent group-hover:from-background/90 transition-all duration-500"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<h3 class="text-headline-md font-headline-md text-on-surface transition-transform duration-500 group-hover:scale-110">Party</h3>
-</div>
-</a>
-<!-- Birthday Card -->
-<a href="birthdayCollection.html" class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer block">
-<img alt="Birthday" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSIkd4G54Ev0TA-ZxIAQomWLdNUaprwcRx06uJqEIwG3F4SaKf0x_wCSgpecvAwGU_5QVANmu-3jCwkd_YPcJgAfx-YAV9pH7o9pXZsmplNvCiK3STNxu2N517VfDGLsEurx8ZrRTd-bx3XYzgYj-nVQhziqkglwftjCcZAJnjQ3qGANVTdoQf_uj229GEVLmDOTSzR1AQ87eEO9iFmbYDKlh7N7CymqPxzoxGz9T-31WA0AKlUPptCj1ifkLoR3YvDVsqg-IsVZY">
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent group-hover:from-background/90 transition-all duration-500"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<h3 class="text-headline-md font-headline-md text-on-surface transition-transform duration-500 group-hover:scale-110">Birthday</h3>
-</div>
-</a>
-<!-- Photoshoot Card -->
-<a href="photoshootCollection.html" class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer block">
-<img alt="Photoshoot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvC3IglY38m7qsAaLlKwkSK3hfqOn4C75-WXaOsl35QfPGieQ0oHNZohVSyMs5Hmydrn_nkRM4aY5-SAYsH_zi11mL7p1zToPVJMrtrnbtLAqzE_to6LNe1HxAa2IgjMXKZ5-TLmx-waTJrLD-L7yYpqP4w_iuoEXfeMEGkGul1GhPYW-Iphr0IcEgAIxWC7qph6WWLflwzwvf6mmdhjvqT4KZDfIUfy9zrLGS_8U98-2HJtuF0Uh-0520">
-<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent group-hover:from-background/90 transition-all duration-500"></div>
-<div class="absolute inset-0 flex items-center justify-center">
-<h3 class="text-headline-md font-headline-md text-on-surface transition-transform duration-500 group-hover:scale-110">Photoshoot</h3>
-</div>
-</a></div>
-</div>
-</section>
-<!-- About Section -->
-<section class="bg-surface-container py-section-padding animate-[fadeInUp_1.2s_ease-out_forwards]" style="opacity: 1;">
-<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative">
-<div class="glass-panel p-12 relative z-10 border border-outline-variant/20">
-<h2 class="text-headline-lg font-headline-lg text-tertiary-fixed mb-8 italic">The Photographer</h2>
-<p class="text-body-md font-body-md text-on-surface-variant mb-6">
-                        Naviure is a lens-based artist dedicated to the preservation of wilderness through visual storytelling. Based in the shadows of the Pacific Northwest, their work explores the intersection of ecology and fine art.
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+        class="relative h-screen w-full flex items-center justify-center overflow-hidden animate-[fadeInUp_1.2s_ease-out_forwards]"
+        style="opacity: 1;">
+        <div class="absolute inset-0 z-0">
+            <img alt="Hero Image" class="w-full h-full object-cover grayscale-[20%] contrast-[1.05]"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvsdzkzS2FhQ69MUQXRRNc2hc5iPVNZG_6IkN7XNy_5tDK8X8UipqU7A3Lfi7vrQKSHKi7KQfJ8emVbJXe1rstM0EFg3dY1CofFoyXqdmOAHFlnFo7Qdk22mekon7Ys7pJOpBaazc4IIc6ViaJpC8Q9JKfVl9KrHrRgtAuXuAiY82z_mOz9SzCWU4TDdDpMHvYlGb5DcBlQV5q7tSGQQbvoMqaPg6KAhbq8e7mZpx7OkFlsR-vAG8n8lOr1Bc2LWLBMzIJOlozXug">
+            <div class="absolute inset-0 royal-gradient"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl px-gutter">
+            <div
+                class="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+                <span
+                    class="text-[20vw] font-display-lg text-primary/5 tracking-[0.25em] uppercase leading-none blur-[2px] animate-[fadeIn_2.5s_ease-out_forwards]">
+                    NAVIURE
+                </span>
+            </div>
+            <span
+                class="text-label-caps font-label-caps text-primary tracking-[0.5em] mb-8 block opacity-0 animate-[fadeIn_1.5s_ease-out_forwards]">FINE
+                ART PHOTOGRAPHY</span>
+            <h1 class="text-display-lg font-display-lg text-on-surface mb-4 animate-[fadeInUp_1.8s_ease-out_forwards] uppercase tracking-[0.1em]"
+                style="font-weight: 900; filter: blur(0.4px); text-shadow: rgba(217, 197, 141, 0.3) 0px 0px 20px; background: linear-gradient(rgb(225, 228, 217) 0%, rgb(217, 197, 141) 100%) text; -webkit-text-fill-color: transparent; font-family: &quot;EB Garamond&quot;, serif;">
+                NAVIURE</h1>
+        </div>
+    </section>
+    <!-- About / Mood Board Section -->
+    <section class="relative bg-background py-section-padding overflow-hidden animate-[fadeInUp_1.2s_ease-out_forwards]"
+        style="opacity: 1;">
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-20">
+            <div class="moss-texture w-full h-full"></div>
+        </div>
+        <div class="root-divider -top-20">
+            <svg fill="none" height="200" viewBox="0 0 400 200" width="400" xmlns="http://www.w3.org/2000/svg">
+                <path d="M200 0C200 40 180 60 150 80C120 100 100 140 100 200" opacity="0.4" stroke="#d9c58d"
+                    stroke-dasharray="8 8" stroke-width="1.5"></path>
+                <path d="M200 0C200 30 220 50 250 70C280 90 300 130 300 200" opacity="0.3" stroke="#d9c58d"
+                    stroke-dasharray="10 5" stroke-width="1"></path>
+            </svg>
+        </div>
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-5 mb-16 md:mb-0">
+                <h2 class="text-headline-lg font-headline-lg text-primary mb-8 leading-tight">
+                    Hey There I'm<br><span class="italic font-light">Naveen</span>
+                </h2>
+                <div class="space-y-6 text-body-lg font-body-lg text-on-surface-variant/90 leading-relaxed">
+                    <p class="">I am Naviure, a passionate photographer dedicated to capturing real moments with
+                        creativity and royal refinement. I specialize in portraits, events, and fine-art landscapes,
+                        focusing on natural expressions and meaningful details.</p>
+                    <p class="">My goal is to turn everyday occurrences into timeless visual narratives through a unique
+                        perspective, meticulous composition, and a deep appreciation for the emerald soul of the forest.
                     </p>
-<p class="text-body-md font-body-md text-on-surface-variant">
-                        By focusing on the "silent" aspects of the forest—the rot, the mist, the ancient bark—Naviure aims to foster a deeper connection between the viewer and the fragile, enduring world outside our windows.
+                </div>
+            </div>
+            <div class="md:col-span-7 grid grid-cols-2 gap-6 relative">
+                <div class="space-y-6 translate-y-12">
+                    <div
+                        class="aspect-[4/5] overflow-hidden rounded-lg border border-primary/10 shadow-2xl grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                        <img alt="Forest detail" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk94yb40x9727rL2Qd9r1pSvYa1Sv9Pc4EuS_1bL-YHR65bMWJM-0Hw4x-lLfcy9sm0JL-mWrxgKsmqIoPB4nm4VMSL8UXPOLqGSMCwlM8SyhWKagTkE0mTUYymTZRJEZh6LeAE73C2AwM_PMIe4mhj6W3fmZkRIjIkhtrKN7yBMIh1RlDymbEEX4UiQBUccwDEFD0VaVU-Bnylv0EovgTmgP_ujnAZIVT2ffFzHcXtQOp5VSLkpgnIvEhid-zlYG17HLsxtMvHmY">
+                    </div>
+                    <div
+                        class="aspect-square overflow-hidden rounded-lg border border-primary/10 shadow-2xl grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                        <img alt="Misty woods" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_KyFFWCXoNw0aSPv7Pb0Tfv_IHUEnTdRQaL2H8X_Rhdi5NnLbk1_KJFe8w9akZzMCxjWGBwelK5H5YHhAlztYy15C28eKKd8xIAgmI0hJHZLOEq316KWrEbp4hTTCJosmJSjylkCTENRefagIuys6O5dBYGU0KxZqA8Mxb5xAVdarokIe3sm9WhQxMOgX5Q3SQvc-zXulIdvT4MpRsWDeiAAViXGQD2l0nuaHRjSAnElnmBc8R9_nfTLwunYFb-6QAeJkfxgfQ7E">
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div
+                        class="aspect-square overflow-hidden rounded-lg border border-primary/10 shadow-2xl grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                        <img alt="Light rays" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsM4UqChDgrZjBVifosddbCSYEc-_DThCnW0MhIv13oPATn5KRwUf606-czv0tm2QgPfj6lYbZHamL4SKVJ17B8O3n9tEWzCuSXvXW42AIf7Ptoo2llYVnQhONokLA8BQ2nYTWufksRgMsKUcBWhtxpmdwha7W3tP1VzUGnX4J61Q1JfiyLXuYzN3J6Hx_ZYGMnmUS6xRLHzdvyV8SWds_Pkr9EuT4w24qYcvZgoMHvZ5k6F3-aOkTH8UulCDyVb0ySY7UOc5X3sA">
+                    </div>
+                    <div
+                        class="aspect-[3/4] overflow-hidden rounded-lg border border-primary/10 shadow-2xl grayscale-[30%] hover:grayscale-0 transition-all duration-700">
+                        <img alt="Mushroom detail" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAUa-i09wsfGi88wQjePIe7vb3sLEEXsFCQ3O-tEKwX7L7XAyeF6ta45q7H9d11GnjDU0lE-5dqhCh7tKKTBpRPfg9TIQkAf0k09ZW7GCOyNQhAKHZJXgPQwMhVJHmJpaSKBAcBE4iYQK2UsZzYL0UQ-PaqRKzZUUW64Jrcs7rMrca-9qf3riooWamb610vYaFIQNKDONCzYGCNeFQBJgwHgqWs6GOCmypZ_XszYXlr-pc8buvwGDxf2bZAoHcrywOnE7g948bJyo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Collections Section -->
+    <section id="collections" class="bg-surface-container-low py-section-padding relative animate-[fadeInUp_1.2s_ease-out_forwards]"
+        style="opacity: 1;">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="mb-16 flex flex-col items-center text-center">
+                <span class="text-label-caps font-label-caps text-primary tracking-[0.3em] mb-4">GALLERIES</span>
+                <h2 class="text-headline-lg font-headline-lg text-on-surface">Curated Collections</h2>
+                <div class="w-24 h-[1px] bg-primary mt-6 opacity-60"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Wedding Card -->
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-lg border border-outline-variant/20 shadow-xl cursor-pointer"
+                    onclick="window.location.href='weddingCollection.html'">
+                    <img alt="Wedding"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB7XlcNT7_s_BtoUg8lqMs4mySDUzjTPDJAUXLMO_AKquGjSm5xiPUBElKizu7enaHo6eO2Gs7rUM49L3Fwj2cJ4XgnGj-QvxAfzaBtIJ9yQFqNwe9GISWRfQPXo5lzOfbcIyTYpnPZAW3plBST9GPwSuXutsn6qoX6ityK9VDEE9rvRLSPZKE5GrDjwWFuB0xRXAx67oozNHLXf0479vEcYGmhQBm23m-lEgpZlPFCmMVrKj0j9Dcj28EHnG0Cv2eUQtxQJq-9qE">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-end pb-12">
+                        <h3
+                            class="text-headline-md font-headline-md text-on-surface tracking-wide group-hover:text-primary transition-colors duration-500">
+                            Wedding</h3>
+                        <span
+                            class="text-label-caps font-label-caps text-primary/0 group-hover:text-primary/100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 mt-2">View
+                            Gallery</span>
+                    </div>
+                </div>
+                <!-- Pre-Wedding Card -->
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-lg border border-outline-variant/20 shadow-xl cursor-pointer"
+                    onclick="window.location.href='preweddingCollection.html'">
+                    <img alt="Pre-Wedding"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-io3Ez3qvV-GcgThSoyIMZ0zIX7LnKYgW8sSlHwoNqM2SAW8pqtnD0hyZpHPeStEldr_qxiVlTX8xNucttQnTLW0vcP06Q4LZ__S1rJHod89uyZrxSCJmybb54m6Zr-8oNCnpW_AwnyvB_JR_-6OyG3nEl3t1tUiY3XwUS-0CZl9xhj9bEURrOpa3F2Z9VwU-9c4QKqY6OqFiSgqTk4__VgvxpxXy1KV6SNCvfoXzy-cWGcARjxmWkLnu8X6_572qrDiZlqJId-Y">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-end pb-12">
+                        <h3
+                            class="text-headline-md font-headline-md text-on-surface tracking-wide group-hover:text-primary transition-colors duration-500">
+                            Pre-Wedding</h3>
+                        <span
+                            class="text-label-caps font-label-caps text-primary/0 group-hover:text-primary/100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 mt-2">View
+                            Gallery</span>
+                    </div>
+                </div>
+                <!-- Nature Card -->
+                <div class="group relative aspect-[3/4] overflow-hidden rounded-lg border border-outline-variant/20 shadow-xl cursor-pointer"
+                    onclick="window.location.href='natureCollection.html'">
+                    <img alt="Nature"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgxn3ehsMrjHAMz5F6o9bCXuHmmzf6lif1thMgyRGAyn1jZXMmlbh8CSd7xWwdQoi1dvzuCq6Am2tjBvYH0-bmmTdiUrEVpwhmzLpCHbiNCYQ7UJYrIJNDqeNgDcf8_fE4fE4MYILWTdq4Pj_XyfYIMD0uhcX7LqsuGpxaCJHF8BsLwz7OxU05IgjtI45X11bKyG1jiSDPDw5hJ9zC1-FgCdWPU86ftWvOiPiYFtGnZGv11UxW1LiDloQv8fBhpIfRFC3JoUwx_Es">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-end pb-12">
+                        <h3
+                            class="text-headline-md font-headline-md text-on-surface tracking-wide group-hover:text-primary transition-colors duration-500">
+                            Nature</h3>
+                        <span
+                            class="text-label-caps font-label-caps text-primary/0 group-hover:text-primary/100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 mt-2">View
+                            Gallery</span>
+                    </div>
+                </div>
+                <!-- Party Card -->
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-lg border border-outline-variant/20 shadow-xl cursor-pointer"
+                    onclick="window.location.href='partyCollection.html'">
+                    <img alt="Party"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA048PqAyOBsszjmAtp9bMo8U0IBq6V1pg8yJm_CHns-EumARUknFLdVzBAqhXMW-ANd3kGdU0etmt4lY1lCupb84BrX50enZqx1mfE0zuk8Oz8qaFPETSe_mbZQXbkYmTEMqzwxI7QQClxvSuBacauUbss8ddlHzqdvtMDSYgJSu8w4MqmGHftz3VQKL8KXzAGdhGfFlNej6iIuLvCCpZkSa-3GpIhZBR4zPHB9JG7Fo2YYQKDhuqTnix6WcDNoCMIlVrNS0EeZYI">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-end pb-12">
+                        <h3
+                            class="text-headline-md font-headline-md text-on-surface tracking-wide group-hover:text-primary transition-colors duration-500">
+                            Event</h3>
+                        <span
+                            class="text-label-caps font-label-caps text-primary/0 group-hover:text-primary/100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 mt-2">View
+                            Gallery</span>
+                    </div>
+                </div>
+                <!-- Birthday Card -->
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-lg border border-outline-variant/20 shadow-xl cursor-pointer"
+                    onclick="window.location.href='birthdayCollection.html'">
+                    <img alt="Birthday"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSIkd4G54Ev0TA-ZxIAQomWLdNUaprwcRx06uJqEIwG3F4SaKf0x_wCSgpecvAwGU_5QVANmu-3jCwkd_YPcJgAfx-YAV9pH7o9pXZsmplNvCiK3STNxu2N517VfDGLsEurx8ZrRTd-bx3XYzgYj-nVQhziqkglwftjCcZAJnjQ3qGANVTdoQf_uj229GEVLmDOTSzR1AQ87eEO9iFmbYDKlh7N7CymqPxzoxGz9T-31WA0AKlUPptCj1ifkLoR3YvDVsqg-IsVZY">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-end pb-12">
+                        <h3
+                            class="text-headline-md font-headline-md text-on-surface tracking-wide group-hover:text-primary transition-colors duration-500">
+                            Portrait</h3>
+                        <span
+                            class="text-label-caps font-label-caps text-primary/0 group-hover:text-primary/100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 mt-2">View
+                            Gallery</span>
+                    </div>
+                </div>
+                <!-- Photoshoot Card -->
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-lg border border-outline-variant/20 shadow-xl cursor-pointer"
+                    onclick="window.location.href='photoshootCollection.html'">
+                    <img alt="Photoshoot"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida/AP1WRLvC3IglY38m7qsAaLlKwkSK3hfqOn4C75-WXaOsl35QfPGieQ0oHNZohVSyMs5Hmydrn_nkRM4aY5-SAYsH_zi11mL7p1zToPVJMrtrnbtLAqzE_to6LNe1HxAa2IgjMXKZ5-TLmx-waTJrLD-L7yYpqP4w_iuoEXfeMEGkGul1GhPYW-Iphr0IcEgAIxWC7qph6WWLflwzwvf6mmdhjvqT4KZDfIUfy9zrLGS_8U98-2HJtuF0Uh-0520">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-all duration-500">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-end pb-12">
+                        <h3
+                            class="text-headline-md font-headline-md text-on-surface tracking-wide group-hover:text-primary transition-colors duration-500">
+                            Editorial</h3>
+                        <span
+                            class="text-label-caps font-label-caps text-primary/0 group-hover:text-primary/100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 mt-2">View
+                            Gallery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="bg-surface-container py-section-padding animate-[fadeInUp_1.2s_ease-out_forwards]"
+        style="opacity: 1;">
+        <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="glass-panel p-12 relative z-10 border border-primary/20 rounded-lg shadow-2xl">
+                    <h2 class="text-headline-lg font-headline-lg text-primary mb-8 italic">The Photographer</h2>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        Naviure is a lens-based artist dedicated to the preservation of wilderness through visual
+                        storytelling. Based in the shadows of the Pacific Northwest, their work explores the
+                        intersection of ecology and fine art.
                     </p>
-</div>
-<div class="absolute -bottom-8 -right-8 w-64 h-64 border-2 border-primary/20 pointer-events-none"></div>
-</div>
-<div class="space-y-12">
-<div>
-<h4 class="text-label-caps font-label-caps text-primary tracking-widest mb-6">EQUIPMENT &amp; CRAFT</h4>
-<ul class="space-y-4 text-on-surface-variant/80 font-body-md">
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary text-[18px]">adjust</span>
-                            Medium Format Digital Workflow
-                        </li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary text-[18px]">filter_vintage</span>
-                            Natural &amp; Ambient Light Only
-                        </li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary text-[18px]">eco</span>
-                            Eco-Conscious Printing Methods
-                        </li>
-</ul>
-</div>
-<div class="pt-8 border-t border-outline-variant/30">
-<p class="text-headline-md font-headline-md italic mb-4">"The forest is never silent if you know how to listen."</p>
-<span class="text-label-caps font-label-caps text-secondary">— NAVIURE</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest py-section-padding relative overflow-hidden border-t border-outline-variant/20">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-24">
-<div class="flex flex-col gap-4">
-<span class="text-headline-lg font-headline-lg text-primary-fixed tracking-widest">NAVIURE</span>
-<p class="text-body-md font-body-md text-on-surface-variant max-w-sm">
-                        Deep in the Silent Forest, where time slows and nature speaks.
+                    <p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+                        By focusing on the "silent" aspects of the forest—the rot, the mist, the ancient bark—Naviure
+                        aims to foster a deeper connection between the viewer and the fragile, enduring world outside
+                        our windows.
                     </p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-<div class="flex flex-col gap-4">
-<span class="text-label-caps font-label-caps text-primary">PORTFOLIO</span>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Archive</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Print Shop</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Expeditions</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="text-label-caps font-label-caps text-primary">INFO</span>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Conservation</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Licensing</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Privacy</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="text-label-caps font-label-caps text-primary">SOCIAL</span>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Instagram</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Behance</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Vimeo</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="text-label-caps font-label-caps text-primary">CONNECT</span>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="mailto:hello@naviure.com">Contact</a>
-<a class="text-label-caps font-label-caps text-on-surface-variant hover:text-tertiary-fixed transition-colors" href="#">Inquire</a>
-</div>
-</div>
-</div>
-<div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-outline-variant/10 text-label-caps font-label-caps text-on-surface-variant/40">
-<p class="">© 2024 NAVIURE PHOTOGRAPHY. DEEP IN THE SILENT FOREST.</p>
-<div class="flex gap-8 mt-4 md:mt-0">
-<a class="hover:text-primary transition-colors" href="#">TERMS</a>
-<a class="hover:text-primary transition-colors" href="#">COOKIES</a>
-</div>
-</div>
-</div>
-<!-- Decorative subtle drifting mist element -->
-<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none animate-pulse"></div>
-</footer>
-<script>
+                </div>
+                <div
+                    class="absolute -bottom-6 -right-6 w-64 h-64 border-2 border-primary/10 pointer-events-none rounded-lg">
+                </div>
+            </div>
+            <div class="space-y-12">
+                <div>
+                    <h4 class="text-label-caps font-label-caps text-primary tracking-[0.25em] mb-8">EQUIPMENT &amp;
+                        CRAFT</h4>
+                    <ul class="space-y-6 text-on-surface-variant/90 font-body-md">
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary text-[20px]">adjust</span>
+                            <span class="body-lg">Medium Format Digital Workflow</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary text-[20px]">filter_vintage</span>
+                            <span class="body-lg">Natural &amp; Ambient Light Mastery</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary text-[20px]">eco</span>
+                            <span class="body-lg">Eco-Conscious Archival Printing</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pt-8 border-t border-outline-variant/20">
+                    <p class="text-headline-md font-headline-md italic mb-4 text-on-surface">"The forest is never silent
+                        if you know how to listen."</p>
+                    <span class="text-label-caps font-label-caps text-primary tracking-[0.2em]">— NAVIURE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-lowest py-section-padding relative overflow-hidden border-t border-outline-variant/10">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-24">
+                <div class="flex flex-col gap-6">
+                    <span class="text-headline-lg font-headline-lg text-primary tracking-[0.2em]">NAVIURE</span>
+                    <p class="text-body-md font-body-md text-on-surface-variant/70 max-w-sm">
+                        Deep in the Silent Forest, where time slows and nature speaks in whispers of emerald and gold.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                    <div class="flex flex-col gap-5">
+                        <span class="text-label-caps font-label-caps text-primary opacity-80">PORTFOLIO</span>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Archive</a>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Print Shop</a>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Expeditions</a>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <span class="text-label-caps font-label-caps text-primary opacity-80">INFO</span>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Conservation</a>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Licensing</a>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Privacy</a>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <span class="text-label-caps font-label-caps text-primary opacity-80">SOCIAL</span>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Instagram</a>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Behance</a>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Vimeo</a>
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <span class="text-label-caps font-label-caps text-primary opacity-80">CONNECT</span>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="mailto:hello@naviure.com">Contact</a>
+                        <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                            href="#">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-outline-variant/10 text-label-caps font-label-caps text-on-surface-variant/40">
+                <p class="">© 2026 NAVIURE PHOTOGRAPHY. ESTABLISHED IN THE SILENT FOREST.</p>
+                <div class="flex gap-8 mt-4 md:mt-0">
+                    <a class="hover:text-primary transition-colors" href="#">TERMS OF SERVICE</a>
+                    <a class="hover:text-primary transition-colors" href="#">COOKIE POLICY</a>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative subtle drifting mist element -->
+        <div
+            class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none animate-pulse">
+        </div>
+    </footer>
+    <script>
         // Smooth reveal on scroll interaction
         const observerOptions = {
             threshold: 0.1
@@ -388,30 +499,15 @@
             observer.observe(section);
         });
 
-        // Parallax effect for "root" elements and images
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxItems = document.querySelectorAll('.group img');
-            
-            parallaxItems.forEach(item => {
-                const speed = 0.05;
-                const rect = item.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const yPos = (window.innerHeight - rect.top) * speed;
-                    item.style.transform = `scale(1.1) translateY(${yPos}px)`;
-                }
-            });
-        });
-
         // Header scroll behavior
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('h-16', 'bg-background/95');
-                header.classList.remove('h-20', 'bg-background/80');
+            if (window.scrollY > 80) {
+                header.classList.add('h-16', 'bg-background/95', 'shadow-2xl');
+                header.classList.remove('h-20', 'bg-background/90');
             } else {
-                header.classList.add('h-20', 'bg-background/80');
-                header.classList.remove('h-16', 'bg-background/95');
+                header.classList.add('h-20', 'bg-background/90');
+                header.classList.remove('h-16', 'bg-background/95', 'shadow-2xl');
             }
         });
     </script>
@@ -421,10 +517,6 @@
 
 
 
+</body>
 
-
-
-
-
-
-</body></html>
+</html>
