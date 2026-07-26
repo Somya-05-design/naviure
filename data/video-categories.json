@@ -1,0 +1,47 @@
+[
+  {
+    "id": "vcat-wedding",
+    "slug": "wedding",
+    "name": "Wedding Films",
+    "description": "Cinematic wedding stories told with timeless elegance",
+    "coverImage": "https://media.naviure.in/wedding/titu/main/photos/1784042693675-a16881a4-t111932.jpg",
+    "order": 0,
+    "featured": true
+  },
+  {
+    "id": "vcat-pre-wedding",
+    "slug": "pre-wedding",
+    "name": "Pre Wedding Films",
+    "description": "Romantic narratives before the celebration begins",
+    "coverImage": "https://media.naviure.in/pre-wedding/v-and-r/main/photos/1784041312455-a55bcd4c-ng-04438.jpg",
+    "order": 1,
+    "featured": true
+  },
+  {
+    "id": "vcat-portraits",
+    "slug": "portraits",
+    "name": "Portrait Films",
+    "description": "Intimate moving portraits with luxury aesthetics",
+    "coverImage": "https://media.naviure.in/portraits/general-portrait-portfolio/main/photos/1784040957984-ec5e3870-vsr02446.jpg",
+    "order": 2,
+    "featured": false
+  },
+  {
+    "id": "vcat-maternity",
+    "slug": "maternity",
+    "name": "Maternity Films",
+    "description": "The beauty of new beginnings in motion",
+    "coverImage": "https://media.naviure.in/maternity/maternity-vaani/main/photos/1784040711885-868a9a07-ng-05296.jpg",
+    "order": 3,
+    "featured": false
+  },
+  {
+    "id": "vcat-club-events",
+    "slug": "club-events",
+    "name": "Club Events",
+    "description": "Dynamic energy of nightlife and live events",
+    "coverImage": "https://media.naviure.in/wedding/titu/main/photos/1784042693675-a16881a4-t111932.jpg",
+    "order": 4,
+    "featured": false
+  }
+]

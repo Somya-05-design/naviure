@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+:root {
+  --color-black: #0A0A0A;
+  --color-matte-black: #08100c;
+  --color-deep-emerald: #081A12;
+  --color-forest-green: #0D2218;
+  --color-emerald: #0F3D2E;
+  --color-glass-white: rgba(255, 255, 255, 0.08);
+  --color-soft-white: #F8F7F2;
+  --color-gold: #C8A96A;
+  --background: var(--color-deep-emerald);
+  --foreground: var(--color-soft-white);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-emerald: var(--color-emerald);
+  --color-forest: var(--color-forest-green);
+  --color-deep-emerald: var(--color-deep-emerald);
+  --color-gold: var(--color-gold);
+  --color-glass: var(--color-glass-white);
+  --color-soft-white: var(--color-soft-white);
+  --color-matte: var(--color-matte-black);
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-inter);
+  --font-script: var(--font-script);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: auto;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(15, 61, 46, 0.32), transparent 35%),
+    linear-gradient(180deg, #050806 0%, var(--color-deep-emerald) 42%, #050806 100%);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  cursor: auto;
+}
+
+a,
+button,
+[role="button"],
+label[for],
+select,
+summary {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  cursor: text;
+}
+
+:disabled,
+[disabled],
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: var(--color-emerald);
+  color: var(--color-soft-white);
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(248, 247, 242, 0.08), rgba(248, 247, 242, 0.025));
+  backdrop-filter: blur(24px) saturate(1.25);
+  -webkit-backdrop-filter: blur(24px) saturate(1.25);
+  border: 1px solid rgba(248, 247, 242, 0.12);
+}
+
+.glass-dark {
+  background: linear-gradient(135deg, rgba(8, 26, 18, 0.7), rgba(5, 8, 6, 0.48));
+  backdrop-filter: blur(28px) saturate(1.35);
+  -webkit-backdrop-filter: blur(28px) saturate(1.35);
+  border: 1px solid rgba(248, 247, 242, 0.1);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(248, 247, 242, 0.08);
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, var(--color-emerald), var(--color-forest-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-blur-bottom {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+}
+
+.luxury-enter-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.luxury-enter-button::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 106, 0.75), transparent);
+  opacity: 0;
+  transform: translateX(-70%);
+  transition: opacity 500ms ease, transform 900ms ease;
+  z-index: -1;
+}
+
+.luxury-enter-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(200, 169, 106, 0.18), transparent 58%);
+  opacity: 0;
+  transform: scale(0.72);
+  transition: opacity 500ms ease, transform 600ms ease;
+  z-index: -1;
+}
+
+.luxury-enter-button:hover {
+  transform: translateY(-2px) scale(1.025);
+  border-color: rgba(200, 169, 106, 0.7);
+  box-shadow: 0 0 44px rgba(15, 61, 46, 0.5), 0 20px 80px rgba(0, 0, 0, 0.42);
+}
+
+.luxury-enter-button:hover::before {
+  opacity: 1;
+  transform: translateX(70%);
+}
+
+.luxury-enter-button:hover::after {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@keyframes coverflow-sweep {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(420%);
+  }
+}
+
+@keyframes video-card-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes video-card-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(18);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[video-card-shimmer_1\.6s_ease-in-out_infinite\],
+  .animate-\[video-card-ripple_0\.65s_ease-out_forwards\] {
+    animation: none !important;
+  }
+}

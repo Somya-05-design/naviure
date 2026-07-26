@@ -1,0 +1,32 @@
+{
+  "siteName": "NAVIURE",
+  "tagline": "capture by navii",
+  "introVideo": "logo-reveal-transition",
+  "introVideoPortrait": "logo-reveal-intro",
+  "introVideoLandscape": "logo-reveal-transition",
+  "heroImage": "hero-cinematic",
+  "footerImage": "footer-wedding",
+  "animationsEnabled": true,
+  "seo": {
+    "title": "NAVIURE | Luxury Photography Studio",
+    "description": "Premium luxury photography by Naviure. Wedding, portrait, and cinematic visual storytelling crafted with precision and artistry.",
+    "keywords": ["luxury photography", "wedding photographer", "portrait photography", "Naviure", "cinematic photography"],
+    "ogImage": "logo-white",
+    "twitterHandle": "@NAVIURE",
+    "canonicalUrl": "https://naviure.in"
+  },
+  "contact": {
+    "email": "naviure1@gmail.com",
+    "phone": "+91 8839041989",
+    "whatsapp": "+918839041989",
+    "instagram": "https://www.instagram.com/naviure",
+    "address": "India",
+    "mapEmbedUrl": ""
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/naviure",
+    "whatsapp": "https://wa.me/918839041989",
+    "email": "mailto:naviure1@gmail.com",
+    "phone": "tel:+918839041989"
+  }
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "admin-1",
+    "email": "admin@naviure.in",
+    "passwordHash": "$2b$12$H0ldGYTQPFsULf66aN5tleItkVnj9Ky8wtQUVLsWHEYv1sJtRj5bC",
+    "role": "admin",
+    "name": "Admin"
+  }
+]

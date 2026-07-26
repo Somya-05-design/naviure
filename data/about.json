@@ -1,0 +1,59 @@
+{
+  "name": "Navii",
+  "title": "Visual Storyteller",
+  "heroSubtitle": "Crafting timeless moments through the lens of luxury",
+  "story": "Every frame I capture is a deliberate act of storytelling. With over a decade of experience in luxury photography, I transform fleeting moments into eternal narratives. My approach blends cinematic vision with intimate authenticity — creating images that don't just document, but elevate.",
+  "experience": [
+    {
+      "id": "exp-1",
+      "year": "2018 — Present",
+      "title": "Founder, NAVIURE Studio",
+      "description": "Leading a luxury photography studio specializing in weddings, portraits, and cinematic visual content."
+    },
+    {
+      "id": "exp-2",
+      "year": "2015 — 2018",
+      "title": "Senior Photographer, Elite Studios",
+      "description": "Directed high-end wedding and fashion photography projects across India."
+    },
+    {
+      "id": "exp-3",
+      "year": "2012 — 2015",
+      "title": "Freelance Visual Artist",
+      "description": "Built foundational expertise in portrait, event, and editorial photography."
+    }
+  ],
+  "achievements": [
+    { "id": "ach-1", "value": "500+", "label": "Projects Completed" },
+    { "id": "ach-2", "value": "10+", "label": "Years Experience" },
+    { "id": "ach-3", "value": "50+", "label": "Awards & Features" },
+    { "id": "ach-4", "value": "100%", "label": "Client Satisfaction" }
+  ],
+  "services": [
+    {
+      "id": "svc-1",
+      "title": "Wedding Photography",
+      "description": "Cinematic coverage of your most precious day, crafted with editorial precision.",
+      "icon": "heart"
+    },
+    {
+      "id": "svc-2",
+      "title": "Portrait Sessions",
+      "description": "Intimate, art-directed portraits that capture your essence with luxury aesthetics.",
+      "icon": "camera"
+    },
+    {
+      "id": "svc-3",
+      "title": "Pre-Wedding Films",
+      "description": "Story-driven visual narratives that celebrate your journey together.",
+      "icon": "film"
+    },
+    {
+      "id": "svc-4",
+      "title": "Commercial & Events",
+      "description": "Premium visual content for brands, clubs, and exclusive events.",
+      "icon": "sparkles"
+    }
+  ],
+  "photographerImage": "photographer"
+}

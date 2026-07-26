@@ -1,0 +1,83 @@
+[
+  {
+    "id": "cat-wedding",
+    "slug": "wedding",
+    "name": "Wedding",
+    "description": "Timeless celebrations captured with cinematic elegance",
+    "coverImage": "https://media.naviure.in/wedding/general-wedding-portfolio/main/photos/1784041313204-27a1da60-ng-05961.jpg",
+    "order": 0,
+    "featured": true
+  },
+  {
+    "id": "cat-pre-wedding",
+    "slug": "pre-wedding",
+    "name": "Pre Wedding",
+    "description": "Romantic narratives before the big day",
+    "coverImage": "https://media.naviure.in/pre-wedding/k-and-r/main/photos/1784041058962-bae09622-ng-03161.jpg",
+    "order": 1,
+    "featured": true
+  },
+  {
+    "id": "cat-portraits",
+    "slug": "portraits",
+    "name": "Portrait",
+    "description": "Intimate portraits with luxury aesthetics",
+    "coverImage": "https://media.naviure.in/portraits/general-portrait-portfolio/main/photos/1784040944831-7f7e4fb1-vsr02282.jpg",
+    "order": 2,
+    "featured": false
+  },
+  {
+    "id": "cat-club",
+    "slug": "club-photography",
+    "name": "Club Photography",
+    "description": "Dynamic energy of nightlife and events",
+    "coverImage": "https://media.naviure.in/club-photography/artists/main/photos/1784040308823-2381ffb7-ng-08150.jpg",
+    "order": 3,
+    "featured": false
+  },
+  {
+    "id": "cat-maternity",
+    "slug": "maternity",
+    "name": "Maternity",
+    "description": "The beauty of new beginnings",
+    "coverImage": "https://media.naviure.in/maternity/maternity-kiara/main/photos/1784040659496-416e461a-1000021600.jpg",
+    "order": 4,
+    "featured": false
+  },
+  {
+    "id": "cat-corporate",
+    "slug": "corporate",
+    "name": "Corporate",
+    "description": "",
+    "coverImage": "https://media.naviure.in/assets/backgrounds/photographer.jpg",
+    "order": 5,
+    "featured": false
+  },
+  {
+    "id": "cat-fashion",
+    "slug": "fashion",
+    "name": "Fashion",
+    "description": "",
+    "coverImage": "https://media.naviure.in/assets/hero/hero-cinematic.jpg",
+    "order": 6,
+    "featured": false
+  },
+  {
+    "id": "cat-food",
+    "slug": "food",
+    "name": "Food",
+    "description": "",
+    "coverImage": "https://media.naviure.in/food/general-food-portfolio/main/photos/1784040628174-c147529c-a-j06217.jpg",
+    "order": 7,
+    "featured": false
+  },
+  {
+    "id": "cat-others",
+    "slug": "others",
+    "name": "Others",
+    "description": "",
+    "coverImage": "https://media.naviure.in/others/general-portfolio/main/photos/1784044609490-7cb6a2ff-ng-09108.jpg",
+    "order": 8,
+    "featured": false
+  }
+]
