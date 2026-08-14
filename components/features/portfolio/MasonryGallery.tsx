@@ -11,7 +11,7 @@ import {
   type MasonryPlacedItem,
   type MasonrySection,
 } from "@/lib/gallery-layout";
-import { getGalleryThumbUrl } from "@/lib/media-urls";
+import { getGalleryDisplayUrl } from "@/lib/media-urls";
 import type { GalleryImage } from "@/types";
 
 interface MasonryGalleryProps {
@@ -73,7 +73,7 @@ const MasonryPhoto = memo(function MasonryPhoto({
         )}
 
         <MediaImage
-          src={getGalleryThumbUrl(image.src, image.thumbnail)}
+          src={getGalleryDisplayUrl(image.src, image.thumbnail, featured)}
           alt={image.alt}
           width={Math.max(image.width, 1)}
           height={Math.max(image.height, 1)}

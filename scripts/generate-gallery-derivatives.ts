@@ -136,23 +136,23 @@ async function main() {
       const thumbBuf = await sharp(original)
         .rotate()
         .resize({
-          width: 640,
-          height: 640,
+          width: 960,
+          height: 960,
           fit: "inside",
           withoutEnlargement: true,
         })
-        .webp({ quality: 72, effort: 4 })
+        .webp({ quality: 85, effort: 4 })
         .toBuffer();
 
       const webBuf = await sharp(original)
         .rotate()
         .resize({
-          width: 1600,
-          height: 1600,
+          width: 2048,
+          height: 2048,
           fit: "inside",
           withoutEnlargement: true,
         })
-        .webp({ quality: 80, effort: 4 })
+        .webp({ quality: 88, effort: 4 })
         .toBuffer();
 
       const thumbKey = derivativeStorageKey(key, "thumb");

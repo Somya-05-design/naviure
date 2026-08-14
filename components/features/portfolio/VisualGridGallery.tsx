@@ -15,7 +15,7 @@ import {
   getMasonryCanvasHeight,
 } from "@/lib/gallery-builder/masonry-engine";
 import { resolveLayoutForViewport, resolveLayoutItems } from "@/lib/gallery-layout-render";
-import { getGalleryThumbUrl } from "@/lib/media-urls";
+import { getGalleryDisplayUrl } from "@/lib/media-urls";
 import type { GalleryImage } from "@/types";
 import type { GalleryLayout, GalleryLayoutItem } from "@/types/cms";
 
@@ -86,6 +86,7 @@ const VisualGridGallery = memo(function VisualGridGallery({
           const frame = item.frame!;
           const crop = item.crop;
           const scale = 100 / MASONRY_CANVAS_WIDTH;
+          const isWide = frame.w > 600 || item.hero || item.cover;
 
           return (
             <button
@@ -110,7 +111,7 @@ const VisualGridGallery = memo(function VisualGridGallery({
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={getGalleryThumbUrl(image.src, image.thumbnail)}
+                src={getGalleryDisplayUrl(image.src, image.thumbnail, isWide)}
                 alt={item.alt || image.alt}
                 className="h-full w-full object-cover"
                 style={{
@@ -145,6 +146,7 @@ const VisualGridGallery = memo(function VisualGridGallery({
       {positionedItems.map((item, index) => {
         const image = imageMap.get(item.imageId)!;
         const hover = item.hoverStyle;
+        const isWide = item.colSpan > 1 || columns <= 2 || item.hero || item.cover;
 
         return (
           <button
@@ -169,7 +171,7 @@ const VisualGridGallery = memo(function VisualGridGallery({
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={getGalleryThumbUrl(image.src, image.thumbnail)}
+              src={getGalleryDisplayUrl(image.src, image.thumbnail, isWide)}
               alt={item.alt || image.alt}
               className={cn(
                 "h-full w-full object-cover transition duration-700",

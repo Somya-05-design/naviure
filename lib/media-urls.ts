@@ -100,8 +100,8 @@ export function videoThumbLegacyWebpUrl(storageKey: string): string {
 }
 
 /** Width targets for the on-demand image proxy. */
-export const GALLERY_THUMB_WIDTH = 640;
-export const GALLERY_WEB_WIDTH = 1600;
+export const GALLERY_THUMB_WIDTH = 960;
+export const GALLERY_WEB_WIDTH = 2048;
 
 /**
  * Display URL for gallery grids (thumbnails).
@@ -123,11 +123,11 @@ export function getGalleryThumbUrl(
   const key = storageKeyFromMediaUrl(src);
   if (key) {
     // Prefer known derivative path (may 404 until generated — proxy handles that).
-    return `/api/media/image?key=${encodeURIComponent(key)}&w=${GALLERY_THUMB_WIDTH}&q=75`;
+    return `/api/media/image?key=${encodeURIComponent(key)}&w=${GALLERY_THUMB_WIDTH}&q=85`;
   }
 
   if (src.startsWith("https://") || src.startsWith("http://")) {
-    return `/api/media/image?url=${encodeURIComponent(src)}&w=${GALLERY_THUMB_WIDTH}&q=75`;
+    return `/api/media/image?url=${encodeURIComponent(src)}&w=${GALLERY_THUMB_WIDTH}&q=85`;
   }
 
   return thumbnail || src;
@@ -138,14 +138,31 @@ export function getGalleryThumbUrl(
  * Photo lightbox uses getGalleryOriginalUrl — do not swap that to web.
  */
 export function getGalleryWebUrl(src: string): string {
+  if (src.includes("/derivatives/web/")) return src;
+
   const key = storageKeyFromMediaUrl(src);
   if (key) {
-    return `/api/media/image?key=${encodeURIComponent(key)}&w=${GALLERY_WEB_WIDTH}&q=82`;
+    return `/api/media/image?key=${encodeURIComponent(key)}&w=${GALLERY_WEB_WIDTH}&q=88`;
   }
   if (src.startsWith("https://") || src.startsWith("http://")) {
-    return `/api/media/image?url=${encodeURIComponent(src)}&w=${GALLERY_WEB_WIDTH}&q=82`;
+    return `/api/media/image?url=${encodeURIComponent(src)}&w=${GALLERY_WEB_WIDTH}&q=88`;
   }
   return src;
+}
+
+/**
+ * Smart display URL resolution based on container span / screen footprint.
+ * Wide or featured items receive the 2048px Web variant (q=88); normal grid items receive 960px (q=85).
+ */
+export function getGalleryDisplayUrl(
+  src: string,
+  thumbnail?: string | null,
+  isFeaturedOrWide: boolean = false
+): string {
+  if (isFeaturedOrWide) {
+    return getGalleryWebUrl(src);
+  }
+  return getGalleryThumbUrl(src, thumbnail);
 }
 
 /** Original CDN URL — photo lightbox, downloads, admin, archives. */

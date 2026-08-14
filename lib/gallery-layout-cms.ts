@@ -2,7 +2,7 @@ import type { GalleryImage, Category } from "@/types";
 import type { GalleryLayout, GalleryLayoutItem } from "@/types/cms";
 import { migrateLegacyLayout, VIEWPORT_COLUMNS } from "@/types/cms";
 import { buildDefaultLayoutItems } from "@/lib/gallery-builder/engine";
-import { getGalleryThumbUrl } from "@/lib/media-urls";
+import { getGalleryWebUrl } from "@/lib/media-urls";
 
 export function getCoverImageFromLayout(
   layout: GalleryLayout | null | undefined,
@@ -17,7 +17,7 @@ export function getCoverImageFromLayout(
     (img) => img.id === coverItem.imageId && img.category === categorySlug
   );
   if (!image) return undefined;
-  return getGalleryThumbUrl(image.src, image.thumbnail);
+  return getGalleryWebUrl(image.src);
 }
 
 export function getCategoryCoverImage(
@@ -29,11 +29,11 @@ export function getCategoryCoverImage(
   if (fromLayout) return fromLayout;
 
   if (category.coverImage) {
-    return getGalleryThumbUrl(category.coverImage);
+    return getGalleryWebUrl(category.coverImage);
   }
 
   const first = images.find((image) => image.category === category.slug);
-  if (first) return getGalleryThumbUrl(first.src, first.thumbnail);
+  if (first) return getGalleryWebUrl(first.src);
   return "";
 }
 

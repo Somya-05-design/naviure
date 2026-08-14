@@ -10,9 +10,9 @@ import {
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const MAX_WIDTH = 2400;
-const DEFAULT_WIDTH = 640;
-const DEFAULT_QUALITY = 75;
+const MAX_WIDTH = 2560;
+const DEFAULT_WIDTH = 960;
+const DEFAULT_QUALITY = 85;
 const CACHE_CONTROL =
   "public, max-age=31536000, immutable, stale-while-revalidate=86400";
 
@@ -25,11 +25,11 @@ function clampWidth(raw: string | null): number {
 function clampQuality(raw: string | null): number {
   const n = Number(raw);
   if (!Number.isFinite(n) || n <= 0) return DEFAULT_QUALITY;
-  return Math.min(Math.max(Math.round(n), 40), 90);
+  return Math.min(Math.max(Math.round(n), 40), 95);
 }
 
 function variantForWidth(w: number): "thumb" | "web" {
-  return w <= 800 ? "thumb" : "web";
+  return w <= 640 ? "thumb" : "web";
 }
 
 async function fetchBufferFromR2(key: string): Promise<Buffer | null> {
