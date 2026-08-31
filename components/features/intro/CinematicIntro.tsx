@@ -44,7 +44,7 @@ export default function CinematicIntro() {
   const [videoFailed, setVideoFailed] = useState(false);
   const [isEntering, setIsEntering] = useState(false);
   const router = useRouter();
-  const { setIntroComplete, setIsTransitioning } = useApp();
+  const { introComplete, setIntroComplete } = useApp();
 
   useEffect(() => {
     // Client-only source pick (reads device/UA); must run after mount.
@@ -119,24 +119,34 @@ export default function CinematicIntro() {
   const handleEnter = useCallback(() => {
     if (isEntering || !videoEnded) return;
     setIsEntering(true);
-    setIsTransitioning(true);
 
     const container = containerRef.current;
     if (!container) return;
 
+    if (buttonRef.current) {
+      gsap.to(buttonRef.current, {
+        opacity: 0,
+        y: -10,
+        duration: 0.35,
+        ease: "power2.out",
+      });
+    }
+
     gsap.timeline({
       onComplete: () => {
         setIntroComplete(true);
-        router.push("/about");
+        router.push("/about", { scroll: false });
       },
     }).to(container, {
-      scale: 1.06,
-      filter: "blur(16px)",
+      scale: 1.08,
+      filter: "blur(28px) brightness(0.85)",
       opacity: 0,
-      duration: 1.1,
-      ease: "power4.inOut",
+      duration: 1.2,
+      ease: "power3.inOut",
     });
-  }, [isEntering, videoEnded, router, setIntroComplete, setIsTransitioning]);
+  }, [isEntering, videoEnded, router, setIntroComplete]);
+
+  if (introComplete) return null;
 
   return (
     <div
