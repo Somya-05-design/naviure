@@ -3,7 +3,6 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { gsap } from "gsap";
-import { cn } from "@/lib/utils";
 import {
   INTRO_VIDEO_PORTRAIT,
   INTRO_VIDEO_LANDSCAPE,
@@ -36,15 +35,38 @@ function pickIntroSources(): { primary: string; fallback: string | null } {
 export default function CinematicIntro() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const isEnteringRef = useRef(false);
   const [videoSrc, setVideoSrc] = useState<string | null>(null);
   const [fallbackSrc, setFallbackSrc] = useState<string | null>(null);
   const [triedFallback, setTriedFallback] = useState(false);
-  const [videoEnded, setVideoEnded] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
-  const [isEntering, setIsEntering] = useState(false);
   const router = useRouter();
   const { introComplete, setIntroComplete } = useApp();
+
+  const handleEnter = useCallback(() => {
+    if (isEnteringRef.current) return;
+    isEnteringRef.current = true;
+
+    const container = containerRef.current;
+    if (!container) {
+      setIntroComplete(true);
+      router.push("/about", { scroll: false });
+      return;
+    }
+
+    gsap.timeline({
+      onComplete: () => {
+        setIntroComplete(true);
+        router.push("/about", { scroll: false });
+      },
+    }).to(container, {
+      scale: 1.08,
+      filter: "blur(28px) brightness(0.85)",
+      opacity: 0,
+      duration: 1.0,
+      ease: "power3.inOut",
+    });
+  }, [router, setIntroComplete]);
 
   useEffect(() => {
     // Client-only source pick (reads device/UA); must run after mount.
@@ -59,7 +81,6 @@ export default function CinematicIntro() {
     const video = videoRef.current;
     if (!video || !videoSrc) return;
 
-    setVideoEnded(false);
     setVideoFailed(false);
 
     const playVideo = async () => {
@@ -70,9 +91,8 @@ export default function CinematicIntro() {
         video.load();
         await video.play();
       } catch {
-        // Autoplay blocked or load failed — show enter UI
+        // Autoplay blocked or load failed — fallback to brand screen then enter
         setVideoFailed(true);
-        setVideoEnded(true);
       }
     };
 
@@ -84,7 +104,6 @@ export default function CinematicIntro() {
           return;
         }
         setVideoFailed(true);
-        setVideoEnded(true);
       }
     }, 2500);
 
@@ -93,17 +112,14 @@ export default function CinematicIntro() {
     return () => window.clearTimeout(fallbackTimer);
   }, [videoSrc, fallbackSrc, triedFallback]);
 
+  // If video playback fails, automatically transition to site after a brief brand screen
   useEffect(() => {
-    if (!videoEnded || !buttonRef.current) return;
-
-    gsap.fromTo(
-      buttonRef.current,
-      { y: 24, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.9, ease: "power3.out", delay: 0.15 }
-    );
-  }, [videoEnded]);
-
-  const handleVideoEnd = () => setVideoEnded(true);
+    if (!videoFailed) return;
+    const timer = window.setTimeout(() => {
+      handleEnter();
+    }, 1500);
+    return () => window.clearTimeout(timer);
+  }, [videoFailed, handleEnter]);
 
   const handleSourceError = () => {
     // Local missing → try Cloudflare R2; R2 missing → brand fallback UI
@@ -113,50 +129,19 @@ export default function CinematicIntro() {
       return;
     }
     setVideoFailed(true);
-    setVideoEnded(true);
   };
-
-  const handleEnter = useCallback(() => {
-    if (isEntering || !videoEnded) return;
-    setIsEntering(true);
-
-    const container = containerRef.current;
-    if (!container) return;
-
-    if (buttonRef.current) {
-      gsap.to(buttonRef.current, {
-        opacity: 0,
-        y: -10,
-        duration: 0.35,
-        ease: "power2.out",
-      });
-    }
-
-    gsap.timeline({
-      onComplete: () => {
-        setIntroComplete(true);
-        router.push("/about", { scroll: false });
-      },
-    }).to(container, {
-      scale: 1.08,
-      filter: "blur(28px) brightness(0.85)",
-      opacity: 0,
-      duration: 1.2,
-      ease: "power3.inOut",
-    });
-  }, [isEntering, videoEnded, router, setIntroComplete]);
 
   if (introComplete) return null;
 
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[100] overflow-hidden bg-[#030806]"
-      onClick={videoEnded ? handleEnter : undefined}
-      onKeyDown={(e) => videoEnded && e.key === "Enter" && handleEnter()}
-      role={videoEnded ? "button" : undefined}
-      tabIndex={videoEnded ? 0 : -1}
-      aria-label={videoEnded ? "Enter the NAVIURE experience" : "NAVIURE brand introduction"}
+      className="fixed inset-0 z-[100] overflow-hidden bg-[#030806] cursor-pointer"
+      onClick={handleEnter}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " " || e.key === "Escape") && handleEnter()}
+      role="button"
+      tabIndex={0}
+      aria-label="NAVIURE brand introduction"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(15,61,46,0.28),rgba(3,8,6,0.96)_62%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/60" />
@@ -170,16 +155,16 @@ export default function CinematicIntro() {
           autoPlay
           preload="auto"
           onCanPlay={() => setVideoFailed(false)}
-          onEnded={handleVideoEnd}
+          onEnded={handleEnter}
           onError={handleSourceError}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
       )}
 
       {videoFailed && (
-        <div className="absolute inset-0 z-[1] flex items-center justify-center px-8 text-center">
+        <div className="absolute inset-0 z-[1] flex items-center justify-center px-8 text-center pointer-events-none">
           <div>
             <p className="font-display text-2xl tracking-[0.18em] text-soft-white/85">
               NAVIURE
@@ -188,32 +173,6 @@ export default function CinematicIntro() {
               Luxury Photography
             </p>
           </div>
-        </div>
-      )}
-
-      {videoEnded && (
-        <div className="absolute inset-x-0 bottom-0 z-10 flex justify-center px-6 pb-[7vh] md:pb-[6.5vh] pointer-events-none">
-          <button
-            ref={buttonRef}
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              handleEnter();
-            }}
-            className={cn(
-              "pointer-events-auto luxury-enter-button rounded-full",
-              "px-8 py-3 md:px-12 md:py-4",
-              "text-[10px] md:text-[11px] uppercase tracking-[0.34em] font-light text-soft-white/90",
-              "bg-black/12 border border-white/18 shadow-2xl shadow-black/45",
-              "backdrop-blur-2xl",
-              "transition-all duration-500",
-              "hover:text-soft-white",
-              "active:scale-[0.98]"
-            )}
-            aria-label="Enter or touch to continue"
-          >
-            Enter or touch to continue
-          </button>
         </div>
       )}
     </div>

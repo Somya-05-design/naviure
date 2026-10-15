@@ -1,18 +1,17 @@
 "use client";
 
 import { useRef } from "react";
-import MediaImage from "@/components/ui/MediaImage";
 import { gsap } from "gsap";
 import { useScrollTrigger } from "@/hooks/useAnimations";
 import type { ContactSettings, SocialLinks } from "@/types";
 
 interface FooterProps {
-  footerImage: string;
+  footerImage?: string;
   contact: ContactSettings;
   social: SocialLinks;
 }
 
-export default function Footer({ footerImage, contact, social }: FooterProps) {
+export default function Footer({ contact, social }: FooterProps) {
   const footerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -33,20 +32,13 @@ export default function Footer({ footerImage, contact, social }: FooterProps) {
   }, []);
 
   return (
-    <footer ref={footerRef} className="relative mt-auto overflow-hidden">
+    <footer ref={footerRef} className="relative mt-auto overflow-hidden border-t border-white/[0.06]">
       <div className="relative h-[clamp(28vh,32vh,36vh)] min-h-[240px] overflow-hidden">
-        <MediaImage
-          src={footerImage}
-          alt="NAVIURE"
-          fill
-          className="object-cover object-center blur-[2.5px]"
-          sizes="100vw"
-        />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(0deg, rgba(10,16,13,0.55) 0%, rgba(10,16,13,0.15) 45%, rgba(10,16,13,0.3) 100%)",
+              "radial-gradient(circle at 18% 15%, rgba(15, 61, 46, 0.38), transparent 52%), radial-gradient(circle at 82% 85%, rgba(15, 61, 46, 0.22), transparent 48%), radial-gradient(circle at 50% 120%, rgba(200, 169, 106, 0.05), transparent 45%), linear-gradient(180deg, #070e0a 0%, #081A12 50%, #030806 100%)",
           }}
         />
 
