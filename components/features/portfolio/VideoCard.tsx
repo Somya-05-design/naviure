@@ -88,7 +88,7 @@ export default function VideoCard({
 
       {/* Soft glass wash over text band */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-black/80 via-black/40 to-transparent backdrop-blur-[2px]"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-black/80 via-black/40 to-transparent"
         aria-hidden
       />
 

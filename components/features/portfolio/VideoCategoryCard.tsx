@@ -114,7 +114,7 @@ export default function VideoCategoryCard({
               "object-cover transition-[transform,filter] duration-[450ms] ease-out will-change-transform",
               isHovered
                 ? "scale-105 blur-0 brightness-[0.88] contrast-[1.08] grayscale"
-                : "scale-100 blur-[20px] brightness-[0.62] contrast-[0.92] grayscale"
+                : "scale-100 blur-[1.5px] brightness-[0.7] contrast-[0.96] grayscale"
             )}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
@@ -164,7 +164,7 @@ export default function VideoCategoryCard({
 
           <div
             className={cn(
-              "pointer-events-none absolute inset-0 rounded-[26px] backdrop-blur-[2px] transition-opacity duration-[450ms]",
+              "pointer-events-none absolute inset-0 rounded-[26px] transition-opacity duration-[450ms]",
               isHovered ? "bg-white/[0.03] opacity-60" : "bg-white/[0.06] opacity-100"
             )}
           />

@@ -194,7 +194,7 @@ export default function MobileCategoryCarousel({
                     style={{
                       filter: isActive
                         ? "grayscale(0) brightness(1) blur(0px)"
-                        : "grayscale(100%) brightness(0.75) blur(2px)",
+                        : "grayscale(100%) brightness(0.75) blur(0px)",
                     }}
                   >
                     <MediaImage

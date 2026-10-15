@@ -88,7 +88,7 @@ const CategoryCard = forwardRef<HTMLDivElement, CategoryCardProps>(
         scale: isActive ? 1 : 0.92,
         filter: isActive
           ? "blur(0px) grayscale(0) brightness(1)"
-          : "blur(6px) grayscale(1) brightness(0.7)",
+          : "blur(1px) grayscale(1) brightness(0.7)",
         opacity: isActive ? 1 : 0.7,
         duration: 0.62,
         ease: "power3.out",
@@ -150,7 +150,7 @@ const CategoryCard = forwardRef<HTMLDivElement, CategoryCardProps>(
 
     const isCoverflow = layout === "coverflow";
 
-    const blurPx = canHover ? 20 * (1 - revealAmount) : 0;
+    const blurPx = canHover ? 1.5 * (1 - revealAmount) : 0;
     const grayscaleAmt = isCoverflow && canHover ? 1 : 1 - revealAmount;
     const brightness = canHover ? 0.72 + revealAmount * 0.28 : 1;
     const hoverScale = canHover ? 1 + revealAmount * 0.04 : 1;
@@ -218,7 +218,7 @@ const CategoryCard = forwardRef<HTMLDivElement, CategoryCardProps>(
                         transform: isActive ? "scale(1)" : "scale(0.92)",
                         filter: isActive
                           ? "blur(0px) grayscale(0) brightness(1)"
-                          : "blur(6px) grayscale(1) brightness(0.7)",
+                          : "blur(1px) grayscale(1) brightness(0.7)",
                         opacity: isActive ? 1 : 0.7,
                         willChange: "transform, filter, opacity",
                       }
