@@ -17,7 +17,7 @@ export function getCoverImageFromLayout(
     (img) => img.id === coverItem.imageId && img.category === categorySlug
   );
   if (!image) return undefined;
-  return getGalleryWebUrl(image.src);
+  return getGalleryWebUrl(image.thumbnail || image.src);
 }
 
 export function getCategoryCoverImage(
@@ -33,7 +33,7 @@ export function getCategoryCoverImage(
   }
 
   const first = images.find((image) => image.category === category.slug);
-  if (first) return getGalleryWebUrl(first.src);
+  if (first) return getGalleryWebUrl(first.thumbnail || first.src);
   return "";
 }
 

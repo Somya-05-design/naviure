@@ -105,9 +105,7 @@ export const GALLERY_WEB_WIDTH = 2048;
 
 /**
  * Display URL for gallery grids (thumbnails).
- * Prefers baked R2 derivative when `thumbnail` is already a derivative URL;
- * otherwise routes through the resize proxy so the browser never downloads
- * multi‑MB DSLR originals in the grid.
+ * Uses baked R2 WebP derivative (~960px) directly from Cloudflare CDN.
  */
 export function getGalleryThumbUrl(
   src: string,
@@ -117,42 +115,54 @@ export function getGalleryThumbUrl(
     return thumbnail;
   }
   if (thumbnail && thumbnail.includes("/derivatives/web/")) {
-    return thumbnail;
+    return thumbnail.replace("/derivatives/web/", "/derivatives/thumb/");
+  }
+  if (thumbnail) {
+    const thumbKey = storageKeyFromMediaUrl(thumbnail);
+    if (thumbKey && !thumbKey.startsWith("assets/")) {
+      return derivativePublicUrl(thumbKey, "thumb");
+    }
+    if (thumbnail.startsWith("http://") || thumbnail.startsWith("https://")) {
+      return thumbnail;
+    }
   }
 
   const key = storageKeyFromMediaUrl(src);
   if (key) {
-    // Prefer known derivative path (may 404 until generated — proxy handles that).
-    return `/api/media/image?key=${encodeURIComponent(key)}&w=${GALLERY_THUMB_WIDTH}&q=85`;
-  }
-
-  if (src.startsWith("https://") || src.startsWith("http://")) {
-    return `/api/media/image?url=${encodeURIComponent(src)}&w=${GALLERY_THUMB_WIDTH}&q=85`;
+    if (key.startsWith("assets/")) {
+      return src.startsWith("http") ? src : `${MEDIA_HOST}/${key}`;
+    }
+    return derivativePublicUrl(key, "thumb");
   }
 
   return thumbnail || src;
 }
 
 /**
- * Optimized URL for mid-size featured views (web size, not original).
+ * Optimized URL for mid-size featured views (~2048px web size, not original).
+ * Uses baked R2 WebP derivative directly from Cloudflare CDN.
  * Photo lightbox uses getGalleryOriginalUrl — do not swap that to web.
  */
 export function getGalleryWebUrl(src: string): string {
   if (src.includes("/derivatives/web/")) return src;
+  if (src.includes("/derivatives/thumb/")) {
+    return src.replace("/derivatives/thumb/", "/derivatives/web/");
+  }
 
   const key = storageKeyFromMediaUrl(src);
   if (key) {
-    return `/api/media/image?key=${encodeURIComponent(key)}&w=${GALLERY_WEB_WIDTH}&q=88`;
+    if (key.startsWith("assets/")) {
+      return src.startsWith("http") ? src : `${MEDIA_HOST}/${key}`;
+    }
+    return derivativePublicUrl(key, "web");
   }
-  if (src.startsWith("https://") || src.startsWith("http://")) {
-    return `/api/media/image?url=${encodeURIComponent(src)}&w=${GALLERY_WEB_WIDTH}&q=88`;
-  }
+
   return src;
 }
 
 /**
  * Smart display URL resolution based on container span / screen footprint.
- * Wide or featured items receive the 2048px Web variant (q=88); normal grid items receive 960px (q=85).
+ * Wide or featured items receive the 2048px Web variant; normal grid items receive 960px.
  */
 export function getGalleryDisplayUrl(
   src: string,
@@ -160,7 +170,7 @@ export function getGalleryDisplayUrl(
   isFeaturedOrWide: boolean = false
 ): string {
   if (isFeaturedOrWide) {
-    return getGalleryWebUrl(src);
+    return getGalleryWebUrl(thumbnail || src);
   }
   return getGalleryThumbUrl(src, thumbnail);
 }
